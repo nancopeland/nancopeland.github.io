@@ -11,6 +11,12 @@ img {
   vertical-align: middle; }
 
 /******** post styling **********/
+article {
+  margin: 0 auto;
+  width: 75%; }
+  article img {
+    border: 1px solid #767676; }
+
 .help-text {
   color: #767676;
   display: block;

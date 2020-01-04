@@ -1,5 +1,5 @@
 ---
-layout: layout.njk
+layout: post_layout.njk
 title: Slate Podcasts
 ---
 # {{ title }}

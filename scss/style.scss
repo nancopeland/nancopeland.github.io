@@ -1,5 +1,10 @@
 @charset "utf-8";
 
+$dark-grey: #333333;
+$grey: #767676;
+$turquoise: #1adbd3; 
+$turquoise-light: lighten($turquoise, 47%);
+
 body, h1, h2, h3, h4, h5, h6, ul, ol, li, p {
 	font-family: 'franklin-gothic-urw', 'Helvetica', sans-serif; 
 }
@@ -18,9 +23,15 @@ img {
 
 
 /******** post styling **********/
-
+article {
+	margin: 0 auto; 
+	width: 75%;  
+	img {
+		border: 1px solid $grey; 
+	}
+}
 .help-text {
-    color: #767676;
+    color: $grey;
     display: block; 
     font-size: .875rem;
 	margin: 0 0 1rem 0;
