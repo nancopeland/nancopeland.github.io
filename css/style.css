@@ -1,14 +1,36 @@
 body, h1, h2, h3, h4, h5, h6, ul, ol, li, p {
-  font-family: 'franklin-gothic-urw', 'Helvetica', sans-serif; }
+  font-family: 'covik-sans', 'Helvetica', sans-serif; }
 
 body {
   font-size: 18px; }
+
+p {
+  font-size: 1em;
+  margin: 0 0 1rem 0; }
 
 img {
   display: inline-block;
   height: auto;
   max-width: 100%;
   vertical-align: middle; }
+
+/******** homepage **********/
+.card-wrapper {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0; }
+
+.card {
+  border: 3px solid black;
+  padding: 1rem;
+  width: 46%; }
+  .card h2 {
+    font-size: 1em;
+    margin-top: 0;
+    margin-bottom: .5rem; }
+  .card p {
+    margin-bottom: 0; }
 
 /******** post styling **********/
 article {

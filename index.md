@@ -3,4 +3,37 @@ layout: layout.njk
 title: Slate Podcasts
 ---
 
-<p><strong>Nan Copeland</strong> is a designer at <a href="https://slate.com/" target="_blank">Slate</a> living in Brooklyn. See her work below or contact her at <a href="mailto:nmcopeland1@gmail.com" target="_blank">nmcopeland1@gmail.com</a>. Is this updating???</p>
+<h1><strong>Nan Copeland</strong> is a designer living in Brooklyn. Currently, she is an interaction designer at <a href="https://slate.com/">Slate</a>. She enjoys talking to users, data visualization and designing in the browser.</h1>
+
+<p>Here are some projects she has worked on at <a href="https://slate.com/">Slate</a>...</p>
+
+<ul class="card-wrapper">
+	<li class="card">
+		<h2>Podcast experience redesign</h2>
+		<p>I updated the Slate podcasts process to make it easier for users to explore Slate’s shows, find what they’re looking for and subscribe.</p>
+	</li>
+</ul>
+
+<p>Before Slate, she was a front-end designer at <a href="https://www.industrydive.com/">Industry Dive</a>, a media startup in Washington, D.C.</p>
+
+<ul class="card-wrapper">
+	<li class="card">
+		<h2>Flex grid menu</h2>
+		<p>I re-coded the menu for all Industry Dive products using a flex grid. This resulted in a more accessible menu with code that scales better for growth.</p>
+	</li>
+	<li class="card">
+		<h2>Library page redesign</h2>
+		<p>I redesigned the Library page for each of Industry Dive’s publications with the help of the dev team to better showcase the Dive Brand Studio’s content.</p>
+	</li>
+</ul>
+
+<p>She also took a user experience design class at <a href="https://generalassemb.ly/">General Assembly</a>.</p>
+
+<ul class="card-wrapper">
+	<li class="card">
+		<h2>GIG iOS app</h2>
+		<p>GIG is an app for going to concerts with your friends. It was created because I thought there was a void in the market for a service that allows you to plan, buy and attend concerts with your friends easily.</p>
+	</li>
+</ul>
+
+<p>Her email is <a href="mailto:nmcopeland1@gmail.com">nmcopeland1@gmail.com</a>. You can also follow her on <a href="https://twitter.com/nancopeland">Twitter</a> and <a href="https://www.instagram.com/nancopeland/">Instagram</a>.</p>
