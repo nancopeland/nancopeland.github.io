@@ -3,10 +3,18 @@ body, h1, h2, h3, h4, h5, h6, ul, ol, li, p {
 
 body {
   font-size: 18px; }
+  @media (min-width: 40em) {
+    body {
+      margin: 0 auto;
+      width: 60%; } }
 
 p {
   font-size: 1em;
+  line-height: 1.2;
   margin: 0 0 1rem 0; }
+
+a {
+  color: #4C00FE; }
 
 img {
   display: inline-block;
@@ -14,28 +22,50 @@ img {
   max-width: 100%;
   vertical-align: middle; }
 
+/******** nav **********/
+nav {
+  margin: 2rem 0; }
+  nav a {
+    font-weight: 800;
+    text-decoration: none; }
+
 /******** homepage **********/
+.intro {
+  margin-bottom: 3rem; }
+  .intro p {
+    font-size: 2rem; }
+
 .card-wrapper {
-  display: flex;
-  justify-content: space-between;
   list-style: none;
+  margin-bottom: 3rem;
   padding: 0; }
+  @media (min-width: 40em) {
+    .card-wrapper {
+      display: flex;
+      justify-content: space-between; } }
 
 .card {
-  border: 3px solid black;
-  padding: 1rem;
-  width: 46%; }
+  border: 2px solid black;
+  margin-bottom: 1rem;
+  padding: .875rem; }
   .card h2 {
-    font-size: 1em;
+    font-size: .875em;
     margin-top: 0;
     margin-bottom: .5rem; }
   .card p {
+    font-size: .875em;
     margin-bottom: 0; }
+  @media (min-width: 40em) {
+    .card {
+      width: 44%;
+      margin-bottom: 0;
+      /*&:nth-child(odd) {
+			margin-right: 1rem; 
+		}*/ } }
 
 /******** post styling **********/
 article {
-  margin: 0 auto;
-  width: 75%; }
+  margin: 0 auto; }
   article img {
     border: 1px solid #767676; }
 

@@ -1,9 +1,12 @@
 ---
 layout: layout.njk
-title: Slate Podcasts
+title: Index
 ---
 
-<h1><strong>Nan Copeland</strong> is a designer living in Brooklyn. Currently, she is an interaction designer at <a href="https://slate.com/">Slate</a>. She enjoys talking to users, data visualization and designing in the browser.</h1>
+<div class="intro">
+	<p><strong>Nan Copeland</strong> is a designer living in Brooklyn. Currently, she is an interaction designer at <a href="https://slate.com/">Slate</a>.</p>
+	<p>She enjoys talking to users, data visualization and designing in the browser.</p>
+</div>
 
 <p>Here are some projects she has worked on at <a href="https://slate.com/">Slate</a>...</p>
 
