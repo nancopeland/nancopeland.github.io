@@ -1,11 +1,14 @@
 ---
-layout: post_layout.njk
+layout: post-layout.njk
 title: Podcast experience redesign
 ---
 # {{ title }}
 
 I updated the [Slate podcasts process](https://slate.com/podcasts){:target="_blank"} to make it easier for users to explore Slate's shows, find what they're looking for and subscribe. The design was updated to fit the [new Slate brand launched in 2018](https://slate.com/briefing/2018/01/jason-santa-maria-on-how-slate-redesigned-the-way-we-work.html){:target="_blank"}. 
 
+<!--<div class="post-img">
+	<img alt="podcasts homepage" src="/img/slate_podcasts/lp_scroll.gif">
+</div>-->
 ![podcasts homepage](/img/slate_podcasts/lp_scroll.gif)
 
 ## Background
@@ -14,7 +17,11 @@ The podcast redesign process followed [Slate's site redesign](https://slate.com/
 
 When the old site was built, podcasts weren't as high of a priority for Slate so the old podcasts landing page was just a "podcasts" tag page that featured the latest podcast episodes in reverse chronological order. 
 
-![screenshot of old podcasts page](/img/slate_podcasts/old_landing_page.png){:style="margin: 3rem auto 1rem auto;"}
+<!--<div class="post-img">
+	<img alt="screenshot of old podcasts page" src="/img/slate_podcasts/old_landing_page.png">
+	<span class="help-text">Old Slate podcasts landing page</span>
+</div>-->
+![screenshot of old podcasts page](/img/slate_podcasts/old_landing_page.png)
 <span class="help-text" style="margin-bottom: 3rem;">Old Slate podcasts landing page</span>
 
 After we started working on the new podcast templates, a temporary page was put in place that functioned the same as the old one but publishing was in the new CMS. 

@@ -64,10 +64,9 @@ nav {
 		}*/ } }
 
 /******** post styling **********/
-article {
-  margin: 0 auto; }
-  article img {
-    border: 1px solid #767676; }
+article img {
+  border: 1px solid #767676;
+  margin: 3rem 0; }
 
 .help-text {
   color: #767676;
