@@ -7,8 +7,13 @@ $turquoise-light: lighten($turquoise, 47%);
 $purple: #702EE8; 
 $indigo: #4C00FE; 
 
+::selection {
+	background-color: mix(white, $indigo, 90%);
+}
+
 body, h1, h2, h3, h4, h5, h6, ul, ol, li, p {
 	font-family: 'covik-sans', 'Helvetica', sans-serif; 
+	//font-family: 'franklin-gothic-urw', 'Helvetica', sans-serif; 
 }
 
 body {
@@ -18,9 +23,10 @@ body {
 		width: 60%; 
 	} 
 }
+h1 {
+	font-size: 2rem;}
 p {
 	font-size: 1em; 
-	line-height: 1.2; 
 	margin: 0 0 1rem 0; 
 }
 a {
@@ -62,6 +68,13 @@ nav {
 	border: 2px solid black; 
 	margin-bottom: 1rem; 
 	padding: .875rem; 
+	a { 
+		color: inherit;
+		text-decoration: none; 
+		h2 {
+			color: $indigo; 
+		}
+	}
 	h2 {
 		font-size: .875em; 
 		margin-top: 0; 

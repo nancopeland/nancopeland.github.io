@@ -12,8 +12,10 @@ title: Index
 
 <ul class="card-wrapper">
 	<li class="card">
-		<h2>Podcast experience redesign</h2>
-		<p>I updated the Slate podcasts process to make it easier for users to explore Slate’s shows, find what they’re looking for and subscribe.</p>
+		<a href="/slate-podcasts/index.html">
+			<h2>Podcast experience redesign</h2>
+			<p>I updated the Slate podcasts process to make it easier for users to explore Slate’s shows, find what they’re looking for and subscribe.</p>
+		</a>
 	</li>
 </ul>
 
@@ -21,8 +23,10 @@ title: Index
 
 <ul class="card-wrapper">
 	<li class="card">
-		<h2>Flex grid menu</h2>
-		<p>I re-coded the menu for all Industry Dive products using a flex grid. This resulted in a more accessible menu with code that scales better for growth.</p>
+		<a>
+			<h2>Flex grid menu</h2>
+			<p>I re-coded the menu for all Industry Dive products using a flex grid. This resulted in a more accessible menu with code that scales better for growth.</p>
+		</a>
 	</li>
 	<li class="card">
 		<h2>Library page redesign</h2>
