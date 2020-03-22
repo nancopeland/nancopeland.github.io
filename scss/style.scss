@@ -2,6 +2,7 @@
 
 $dark-grey: #333333;
 $grey: #767676;
+$light-grey: #dddddd;
 $turquoise: #1adbd3; 
 $turquoise-light: lighten($turquoise, 47%);
 $purple: #702EE8; 
@@ -17,14 +18,19 @@ body, h1, h2, h3, h4, h5, h6, ul, ol, li, p {
 }
 
 body {
-	font-size: 18px;
+	font-size: 20px;
+	margin: 0 1rem; 
 	@media (min-width: 40em) {
 		margin: 0 auto; 
+		width: 80%; 
+	}
+	@media (min-width: 64em) {
 		width: 60%; 
-	} 
+	}  
 }
 h1 {
-	font-size: 2rem;}
+	font-size: 2rem;
+}
 p {
 	font-size: 1em; 
 	margin: 0 0 1rem 0; 
@@ -97,25 +103,21 @@ nav {
 /******** post styling **********/
 article {
 	img {
-		border: 1px solid $grey; 
+		border: 1px solid $light-grey; 
 		margin: 3rem 0; 
 	}
 }
-.help-text {
+.caption {
     color: $grey;
     display: block; 
     font-size: .875rem;
-	margin: 0 0 1rem 0;
+	margin: -2.25rem 0 3rem 0;
 }
 
 /* flex grid for images */
 .img-flex-wrapper {
 	display: flex; 
 	flex-wrap: wrap;
-	margin: 3rem 0;
-	img {
-		margin: 0; 
-	} 
 }
 @media (min-width: 40em) {
 	.img-flex-50 { 

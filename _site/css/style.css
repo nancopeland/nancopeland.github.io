@@ -5,10 +5,14 @@ body, h1, h2, h3, h4, h5, h6, ul, ol, li, p {
   font-family: 'covik-sans', 'Helvetica', sans-serif; }
 
 body {
-  font-size: 18px; }
+  font-size: 20px;
+  margin: 0 1rem; }
   @media (min-width: 40em) {
     body {
       margin: 0 auto;
+      width: 80%; } }
+  @media (min-width: 64em) {
+    body {
       width: 60%; } }
 
 h1 {
@@ -75,22 +79,19 @@ nav {
 
 /******** post styling **********/
 article img {
-  border: 1px solid #767676;
+  border: 1px solid #dddddd;
   margin: 3rem 0; }
 
-.help-text {
+.caption {
   color: #767676;
   display: block;
   font-size: .875rem;
-  margin: 0 0 1rem 0; }
+  margin: -2.25rem 0 3rem 0; }
 
 /* flex grid for images */
 .img-flex-wrapper {
   display: flex;
-  flex-wrap: wrap;
-  margin: 3rem 0; }
-  .img-flex-wrapper img {
-    margin: 0; }
+  flex-wrap: wrap; }
 
 @media (min-width: 40em) {
   .img-flex-50 {
