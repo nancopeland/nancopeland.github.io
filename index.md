@@ -24,16 +24,14 @@ title: Index
 <p>Before Slate, she was a front-end designer at <a href="https://www.industrydive.com/">Industry Dive</a>, a media startup in Washington, D.C.</p>
 
 <ul class="card-wrapper">
-	<li class="card">
-		<a>
-			<h2>Flex grid menu</h2>
-			<p>I re-coded the menu for all Industry Dive products using a flex grid. This resulted in a more accessible menu with code that scales better for growth.</p>
-		</a>
-	</li>
-	<li class="card">
-		<h2>Library page redesign</h2>
-		<p>I redesigned the Library page for each of Industry Dive’s publications with the help of the dev team to better showcase the Dive Brand Studio’s content.</p>
-	</li>
+	{%- for post in collections.id -%}
+		<li class="card">
+			<a href="{{ post.url }}">
+				<h2>{{ post.data.title }}</h2>
+				<p>{{ post.data.description }}</p>
+			</a>
+		</li>
+	{%- endfor -%}
 </ul>
 
 <p>She also took a user experience design class at <a href="https://generalassemb.ly/">General Assembly</a>.</p>
