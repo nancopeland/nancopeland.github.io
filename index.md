@@ -11,12 +11,14 @@ title: Index
 <p>Here are some projects she has worked on at <a href="https://slate.com/">Slate</a>...</p>
 
 <ul class="card-wrapper">
-	<li class="card">
-		<a href="/slate-podcasts/index.html">
-			<h2>Podcast experience redesign</h2>
-			<p>I updated the Slate podcasts process to make it easier for users to explore Slate’s shows, find what they’re looking for and subscribe.</p>
-		</a>
-	</li>
+	{%- for post in collections.slate -%}
+		<li class="card">
+			<a href="{{ post.url }}">
+				<h2>{{ post.data.title }}</h2>
+				<p>{{ post.data.description }}</p>
+			</a>
+		</li>
+	{%- endfor -%}
 </ul>
 
 <p>Before Slate, she was a front-end designer at <a href="https://www.industrydive.com/">Industry Dive</a>, a media startup in Washington, D.C.</p>
