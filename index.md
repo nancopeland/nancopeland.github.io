@@ -37,10 +37,14 @@ title: Index
 <p>She also took a user experience design class at <a href="https://generalassemb.ly/">General Assembly</a>.</p>
 
 <ul class="card-wrapper">
-	<li class="card">
-		<h2>GIG iOS app</h2>
-		<p>GIG is an app for going to concerts with your friends. It was created because I thought there was a void in the market for a service that allows you to plan, buy and attend concerts with your friends easily.</p>
-	</li>
+	{%- for post in collections.ga -%}
+		<li class="card">
+			<a href="{{ post.url }}">
+				<h2>{{ post.data.title }}</h2>
+				<p>{{ post.data.description }}</p>
+			</a>
+		</li>
+	{%- endfor -%}
 </ul>
 
 <p>Her email is <a href="mailto:nmcopeland1@gmail.com">nmcopeland1@gmail.com</a>. You can also follow her on <a href="https://twitter.com/nancopeland">Twitter</a> and <a href="https://www.instagram.com/nancopeland/">Instagram</a>.</p>
