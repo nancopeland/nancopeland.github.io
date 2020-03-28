@@ -3,8 +3,10 @@ layout: post-layout.njk
 tags: slate
 title: Podcast experience redesign
 description: I updated the Slate podcasts process to make it easier for users to explore Slate’s shows, find what they’re looking for and subscribe.
+nicedate: January 13, 2019
 ---
 # {{ title }}
+<p class="date">{{ nicedate }}</p>
 
 I updated the [Slate podcasts process](https://slate.com/podcasts) to make it easier for users to explore Slate's shows, find what they're looking for and subscribe. The design was updated to fit the [new Slate brand launched in 2018](https://slate.com/briefing/2018/01/jason-santa-maria-on-how-slate-redesigned-the-way-we-work.html). 
 
