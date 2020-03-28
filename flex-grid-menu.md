@@ -3,8 +3,10 @@ layout: post-layout.njk
 tags: id
 title: Flex grid menu
 description: I re-coded the menu for all Industry Dive products using a flex grid. This resulted in a more accessible menu with code that scales better for growth.
+nicedate: March 25, 2018
 ---
 # {{ title }}
+<p class="date">{{ nicedate }}</p>
 
 I re-coded the [menu](https://www.retaildive.com/) for all Industry Dive products using a flex grid. This resulted in a more accessible menu with code that scales better for growth.
 

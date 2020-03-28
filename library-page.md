@@ -3,8 +3,10 @@ layout: post-layout.njk
 tags: id
 title: Library page redesign
 description: I redesigned the Library page for each of Industry Dive’s publications with the help of the dev team to better showcase the Dive Brand Studio’s content.
+nicedate: January 06, 2018
 ---
 # {{ title }}
+<p class="date">{{ nicedate }}</p>
 
 I recently redesigned the [Library page](https://www.biopharmadive.com/library/) for each of Industry Dive's publications with the help of the dev team to better showcase the [Dive Brand Studio's](https://www.industrydive.com/brandstudio/) content.
 

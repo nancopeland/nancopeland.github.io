@@ -3,8 +3,10 @@ layout: post-layout.njk
 tags: ga
 title: GIG iOS app
 description: GIG is an app for going to concerts with your friends. It was created because I thought there was a void in the market for a service that allows you to plan, buy and attend concerts with your friends easily.
+nicedate: October 14, 2017
 ---
 # {{ title }}
+<p class="date">{{ nicedate }}</p>
 
 **<a target="_blank" href="https://invis.io/AMD99G92K">GIG</a>** is an app for going to concerts with your friends. It was created because I thought there was a void in the market for a service that allows you to plan, buy and attend concerts with your friends easily.
 
