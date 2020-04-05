@@ -10,7 +10,7 @@ nicedate: March 25, 2018
 
 I re-coded the [menu](https://www.retaildive.com/) for all Industry Dive products using a flex grid. This resulted in a more accessible menu with code that scales better for growth.
 
-![menu]({{ site.url }}/assets/img/flex_menu/menu.png)
+![menu](/img/flex_menu/menu.png)
 
 ## Goals
 
@@ -19,19 +19,18 @@ Going into this project, my two main goals were:
 1. Make the menu more accessible at a higher number of screen sizes
 2. Make the code more scalable for a growing number of variants in the menu
 
-For inspiration, I looked at both [Vox](https://www.vox.com/){:target="_blank"} and [GitHub's](https://github.com/){:target="_blank"} menus to see how they structured their HTML and CSS because they had similar content (logo, regular menu and sub menu). Both publications use flex grids.
+For inspiration, I looked at both [Vox](https://www.vox.com/) and [GitHub's](https://github.com/) menus to see how they structured their HTML and CSS because they had similar content (logo, regular menu and sub menu). Both publications use flex grids.
 
 ## Research
 
-I started by researching all grid methods. Industry Dive currently uses a modified [Foundation grid](https://foundation.zurb.com/){:target="_blank"} for all sites because it is responsive and well-supported. When I had brought up an alternate grid before, the main concern was support, specifically in Internet Explorer, so I needed to prove that whatever I chose would work within these constraints.
+I started by researching all grid methods. Industry Dive currently uses a modified [Foundation grid](https://foundation.zurb.com/) for all sites because it is responsive and well-supported. When I had brought up an alternate grid before, the main concern was support, specifically in Internet Explorer, so I needed to prove that whatever I chose would work within these constraints.
 
-The most helpful articles were [this Hacker Noon article](https://hackernoon.com/the-ultimate-css-battle-grid-vs-flexbox-d40da0449faf){:target="_blank"} that explains flex vs. CSS grid and [Philip Walton's article](https://philipwalton.github.io/solved-by-flexbox/demos/grids/){:target="_blank"} on how flex grids work in general. 
+The most helpful articles were [this Hacker Noon article](https://hackernoon.com/the-ultimate-css-battle-grid-vs-flexbox-d40da0449faf) that explains flex vs. CSS grid and [Philip Walton's article](https://philipwalton.github.io/solved-by-flexbox/demos/grids/) on how flex grids work in general. 
 
 The Hacker Noon article mentions that "Flexbox is made for one dimensional layouts and Grid is made for two dimensional layouts." Because I was only re-coding the menu (not the whole site), I decided to go with flex. As you can see below, flexbox has great support. From my research, CSS grids seem really cool but are still pretty new and not well-supported. 
 
-{:.p-img}
-![flex grid support]({{ site.url }}/assets/img/flex_menu/flex_support.png){:style="margin: 3rem auto 1rem auto;"}
-<span class="help-text" style="margin-bottom: 3rem;">Flex grid support, screenshot from <a href="https://caniuse.com/#feat=flexbox">Can I Use</a></span>
+![flex grid support](/img/flex_menu/flex_support.png)
+<span class="caption">Flex grid support, screenshot from <a href="https://caniuse.com/#feat=flexbox">Can I Use</a></span>
 
 ## Reassessing the menu SCSS
 
@@ -52,7 +51,7 @@ As previously mentioned, the menu was originally written using a Foundation (flo
 
 With the new flex grid structure, neither the floats nor inline styling were necessary, because the flex grid does this for you. This is easier to manage and scale. 
 
-<code>
+```
 <nav class="site-menu">
     <div class="site-menu-inner">
         <div class="menu-content-wrapper">
@@ -68,13 +67,13 @@ With the new flex grid structure, neither the floats nor inline styling were nec
         </div>
     </div>
 </nav>
-</code>
+```
 
 For the SCSS, most of it made sense after reading the flex grid documentation mentioned above. 
 
-The most confusing property related to the flex grid is [flex](https://developer.mozilla.org/en-US/docs/Web/CSS/flex){:target="_blank"}. The two most frequently used styles are <span class="inline-code">`flex: auto`</span> and <span class="inline-code">`flex: initial`</span>. <span class="inline-code">`auto`</span> grows or shrinks according to the free space in the container while <span class="inline-code">`flex: initial`</span> only shrinks to fill the minimum size of the container. Both styles are used on <span class="inline-code">`.menu-content-wrapper`</span>, which wraps both menus. <span class="inline-code">`initial`</span> is used on mobile screens while <span class="inline-code">`auto`</span> is used on medium and large screens. 
+The most confusing property related to the flex grid is [flex](https://developer.mozilla.org/en-US/docs/Web/CSS/flex). The two most frequently used styles are <span class="inline-code">`flex: auto`</span> and <span class="inline-code">`flex: initial`</span>. <span class="inline-code">`auto`</span> grows or shrinks according to the free space in the container while <span class="inline-code">`flex: initial`</span> only shrinks to fill the minimum size of the container. Both styles are used on <span class="inline-code">`.menu-content-wrapper`</span>, which wraps both menus. <span class="inline-code">`initial`</span> is used on mobile screens while <span class="inline-code">`auto`</span> is used on medium and large screens. 
 
-<code>
+```
 .site-menu-inner {
     align-items: center; // vertically centers all items
     display: flex; 
@@ -97,42 +96,34 @@ The most confusing property related to the flex grid is [flex](https://developer
 .desktop-menu-sub {
     display: flex; 
 }
-</code>
+```
 
 ## Making the flex grid responsive
 
 So far, the changes to the menu haven't changed what it actually looks like. But, as previously stated, one of the goals of this project was to make the menu more accessible on smaller screen sizes. Making it work on mobile is a different project but what about tablets and small laptops? This was going to involve some slight visual changes.
 
-<span class="help-text" style="margin-top: 3rem;">Before:</span>
+![medium menu before](/img/flex_menu/medium_menu_before.png)
+<span class="caption">Before (on smaller desktop screens)</span>
 
-{:.p-img}
-![medium menu before]({{ site.url }}/assets/img/flex_menu/medium_menu_before.png){:style="margin: 0 auto 1.5rem auto;"}
-
-<span class="help-text" style="margin-top: 1.5rem;">After:</span>
-
-{:.p-img}
-![medium menu after]({{ site.url }}/assets/img/flex_menu/medium_menu_after.png){:style="margin: 0 auto 3rem auto;"}
+![medium menu after](/img/flex_menu/medium_menu_after.png)
+<span class="caption">After (on smaller desktop screens)</span>
 
 The first thing to change was the **sub menu CTAs** (the menu on the right). To account for the thinner screen width, I removed the CTA for "search" because the magnifying glass is fairly universally known to represent "search". I considered removing the CTA for the newsletter signup link as well but I don't think the email icon makes much sense without "signup". 
 
 The other element to address was the **"Topics" menu**. On desktop, the "Topics" menu is visible at the top of the page but changes to a dropdown on scroll (see screenshot above). It is also a horizontal menu. I knew on a medium-sized screen, all the items in the menu wouldn't fit horizontally so it should be vertical.
 
 
-{:.p-img}
-![topics menu]({{ site.url }}/assets/img/flex_menu/medium_topics_menu_open.png){:style="margin: 3rem auto 1rem auto;"}
-<span class="help-text" style="margin-bottom: 3rem;">Topics menu open on medium screens</span>
+![topics menu](/img/flex_menu/medium_topics_menu_open.png)
+<span class="caption">Topics menu open on medium screens</span>
 
 ## Finishing touches
 
-To make the menu fully work, I had to reassess the JS associated with the menu and update the SCSS breakpoints so this actually worked across the 15 different menus running on this code (see all pubs [here](https://www.retaildive.com/about/){:target="_blank"}).
+To make the menu fully work, I had to reassess the JS associated with the menu and update the SCSS breakpoints so this actually worked across the 15 different menus running on this code (see all pubs [here](https://www.retaildive.com/about/)).
 
+![smt menu](/img/flex_menu/smt_menu.png)
+<span class="caption"><a target="_blank" href="https://www.socialmediatoday.com/">Social Media Today</a> menu on medium screens</span>
 
-{:.p-img}
-![smt menu]({{ site.url }}/assets/img/flex_menu/smt_menu.png){:style="margin: 3rem auto 1rem auto;"}
-<span class="help-text"><a target="_blank" href="https://www.socialmediatoday.com/">Social Media Today</a> menu on medium screens</span>
-
-{:.p-img}
-![biopharma menu]({{ site.url }}/assets/img/flex_menu/biopharma_menu.png){:style="margin: 3rem auto 1rem auto;"}
-<span class="help-text" style="margin-bottom: 3rem;"><a target="_blank" href="https://www.biopharmadive.com/">BioPharma Dive</a> menu on medium screens</span>
+![biopharma menu](/img/flex_menu/biopharma_menu.png)
+<span class="caption"><a target="_blank" href="https://www.biopharmadive.com/">BioPharma Dive</a> menu on medium screens</span>
 
 Although the JS and SCSS breakpoints brought about some complications, I plan to clean them up in the future. I also want to update the code so the menu is fully responsive from mobile to desktop (goodbye hamburger menu), not just across medium and desktop. 
