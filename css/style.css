@@ -42,7 +42,9 @@ nav {
 
 /******** footer **********/
 footer {
-  margin: 3rem 0 5rem 0; }
+  border-top: 1px solid #dddddd;
+  margin: 5rem 0;
+  padding-top: 2rem; }
   footer p {
     font-size: 1rem; }
 
@@ -98,7 +100,8 @@ article img {
 
 .caption {
   display: block;
-  margin-top: -2.25rem; }
+  margin-top: -2.25rem;
+  line-height: 1.1; }
 
 /* flex grid for images */
 .img-flex-wrapper {

@@ -8,10 +8,9 @@ nicedate: October 14, 2017
 # {{ title }}
 <p class="date">{{ nicedate }}</p>
 
-**<a target="_blank" href="https://invis.io/AMD99G92K">GIG</a>** is an app for going to concerts with your friends. It was created because I thought there was a void in the market for a service that allows you to plan, buy and attend concerts with your friends easily.
+**<a href="https://invis.io/AMD99G92K">GIG</a>** is an app for going to concerts with your friends. It was created because I thought there was a void in the market for a service that allows you to plan, buy and attend concerts with your friends easily.
 
-{:.p-img}
-![app]({{ site.url }}/assets/img/gig_app/app_hand.jpg)
+![app](/img/gig_app/app_hand.jpg)
 
 ## Research
 
@@ -19,18 +18,18 @@ nicedate: October 14, 2017
 
 After deciding on what I thought the problem was, I looked at what already exists in the market to solve this problem. I looked at products that help people plan for events and products that allow you to buy tickets to an event, specifically concerts. 
 
-{:.p-img}
-![competitive analysis]({{ site.url }}/assets/img/gig_app/competitive_analysis1.png)
+![competitive analysis](/img/gig_app/competitive_analysis1.png)
+<span class="caption">Ticketfly was the main competitor for buying tickets</span>
 
-{:.p-img}
-![competitive analysis]({{ site.url }}/assets/img/gig_app/competitive_analysis2.png)
+![competitive analysis](/img/gig_app/competitive_analysis2.png)
+<span class="caption">Bands In Town was the main competitor for concert planning</span>
 
-My main competitors, it seems, are <a target="_blank" href="http://www.ticketfly.com/">Ticketfly</a> and <a target="_blank" href="https://news.bandsintown.com/home">Bands In Town</a>. But, neither one of them fully did what I wanted it to do. 
+My main competitors, it seems, are <a href="http://www.ticketfly.com/">Ticketfly</a> and <a href="https://news.bandsintown.com/home">Bands In Town</a>. But, neither one of them fully did what I wanted it to do. 
 
 Next, I developed a target audience and interviewed people in that audience. My target audience is anyone who goes to a lot of concerts. Although this could be any age, this usually applies to a younger, 20s audience because, after interviewing someone in their 30s, it seems people who are older don't have as much free time to go to many shows. 
 
-{:.p-img}
-![sticky notes]({{ site.url }}/assets/img/gig_app/sticky_notes.jpg)
+![sticky notes](/img/gig_app/sticky_notes.jpg)
+<span class="caption">Sticky note grouping</span>
 
 From this research, I decided on the user's goals, problems and a new problem statement. Although I didn't structure the user interviews around their friends, every person interviewed brought up their friends when asked about their concert-going experience. 
 
@@ -45,8 +44,8 @@ From this research, I decided on the user's goals, problems and a new problem st
 
 **New Problem Statement:** People who attend many concerts have trouble accessing the information they need about the shows in their area and planning for the event with their friends.
 
-{:.p-img}
-![list of features]({{ site.url }}/assets/img/gig_app/features.png)
+![list of features](/img/gig_app/features.png)
+<span class="caption">Goals and Problems mapped to features</span>
 
 ## Planning
 
@@ -56,25 +55,30 @@ Then, I moved on to sketching and wireframing. I talked to a few people about th
 
 <div class="img-flex-wrapper">
 	<div class="img-flex-50">
-		<img alt="sketch #1" src="{{ site.url }}/assets/img/gig_app/sketch1.jpg">
+		<img alt="sketch #1" src="/img/gig_app/sketch1.jpg">
+		<span class="caption">Initial sketching</span>
 	</div>
 	<div class="img-flex-50">
-		<img alt="sketch #2" src="{{ site.url }}/assets/img/gig_app/sketch2.jpg">
+		<img alt="sketch #2" src="/img/gig_app/sketch2.jpg">
+		<span class="caption">Post-card sorting sketching</span>
 	</div>
 </div>
 
-{:.p-img}
-![sketch #3]({{ site.url }}/assets/img/gig_app/sketch3.jpg){:style="margin: 3rem auto;"}
+![sketch #3](/img/gig_app/sketch3.jpg)
+<span class="caption">More sketching</span>
 
 <div class="img-flex-wrapper">
 	<div class="img-flex-33">
-		<img src="{{ site.url }}/assets/img/gig_app/wireframe1.jpg">
+		<img src="/img/gig_app/wireframe1.jpg">
+		<span class="caption">"Upcoming concerts" wireframe</span>
 	</div>
 	<div class="img-flex-33">
-		<img src="{{ site.url }}/assets/img/gig_app/wireframe2.jpg">
+		<img src="/img/gig_app/wireframe2.jpg">
+		<span class="caption">"Friends attending" wireframe</span>
 	</div>
 	<div class="img-flex-33">
-		<img src="{{ site.url }}/assets/img/gig_app/wireframe3.jpg">
+		<img src="/img/gig_app/wireframe3.jpg">
+		<span class="caption">"Concert details" wireframe</span>
 	</div>
 </div>
 
@@ -84,37 +88,45 @@ I then moved on to higher fidelity prototypes. After interviewing users with the
 
 <div class="img-flex-wrapper">
 	<div class="img-flex-50">
-		<img src="{{ site.url }}/assets/img/gig_app/hifi1.jpg">
+		<img src="/img/gig_app/hifi1.jpg">
+		<span class="caption">"Login page" high fidelity wireframe</span>
 	</div>
 	<div class="img-flex-50">
-		<img class="p-img" src="{{ site.url }}/assets/img/gig_app/hifi2.jpg">
+		<img src="/img/gig_app/hifi2.jpg">
+		<span class="caption">"Upcoming concerts" mock</span>
 	</div>
 </div>
 
 ## Final Product
 
-After many iterations, I decided on a final product that many users found clear and easy to use. See the prototype <a target="_blank" href="https://invis.io/AMD99G92K">here</a> and see screenshots of that prototype below.
+After many iterations, I decided on a final product that many users found clear and easy to use. See the prototype <a href="https://invis.io/AMD99G92K">here</a> and see screenshots of that prototype below.
 
 <div class="img-flex-wrapper">
 	<div class="img-flex-33">
-		<img class="p-img" src="{{ site.url }}/assets/img/gig_app/final1.jpg">
+		<img src="/img/gig_app/final1.jpg">
+		<span class="caption">"Login page" final</span>
 	</div>
 	<div class="img-flex-33">
-		<img class="p-img" src="{{ site.url }}/assets/img/gig_app/final2.jpg">
+		<img src="/img/gig_app/final2.jpg">
+		<span class="caption">"Spotify linking" final</span>
 	</div>
 	<div class="img-flex-33">
-		<img class="p-img" src="{{ site.url }}/assets/img/gig_app/final3.jpg">
+		<img src="/img/gig_app/final3.jpg">
+		<span class="caption">"Facebook linking" final</span>
 	</div>
 </div>
 <div class="img-flex-wrapper">
 	<div class="img-flex-33">
-		<img class="p-img" src="{{ site.url }}/assets/img/gig_app/final4.jpg">
+		<img src="/img/gig_app/final4.jpg">
+		<span class="caption">"Upcoming concerts" final</span>
 	</div>
 	<div class="img-flex-33">
-		<img class="p-img" src="{{ site.url }}/assets/img/gig_app/final5.jpg">
+		<img src="/img/gig_app/final5.jpg">
+		<span class="caption">"Concert details" final</span>
 	</div>
 	<div class="img-flex-33">
-		<img class="p-img" src="{{ site.url }}/assets/img/gig_app/final6.jpg">
+		<img src="/img/gig_app/final6.jpg">
+		<span class="caption">"Ticket purchase" final</span>
 	</div>
 </div>
 
