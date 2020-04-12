@@ -4,6 +4,7 @@ title: Index
 ---
 
 <div class="intro">
+	<h1>is this working???</h1>
 	<p>Hi, I'm Nan and I'm an interaction designer at <a href="https://slate.com/">Slate</a> in Brooklyn.</p>
 	<p>I enjoy talking to users, data visualization and designing in the browser.</p>
 </div>
