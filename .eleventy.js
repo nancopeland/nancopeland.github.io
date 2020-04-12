@@ -6,6 +6,9 @@ module.exports = function(eleventyConfig) {
   	templateFormats: ["*"], // default
   });
   return {
-    passthroughFileCopy: true
+    passthroughFileCopy: true, 
+    dir: {
+      output: "docs"
+    }
   }
 }
