@@ -34,15 +34,7 @@ The Hacker Noon article mentions that "Flexbox is made for one dimensional layou
 
 ## Reassessing the menu SCSS
 
-First, I broke up the menu SCSS so it was easier to manage. This was pretty straightforward: the menu CSS was previously all in one SCSS partial so I broke it up into three partials: 
-
-{% highlight scss %}
-_base.scss
-_desktop.scss
-_mobile.scss
-{% endhighlight %}
-
-Currently, the desktop and mobile menus run off almost completely separate code and the small amount of code shared is in `_base.scss`. To implement the flex grid, I would mainly be editing the desktop and base menus so the split made the code more maintainable and easier to read.
+First, I broke up the menu SCSS so it was easier to manage. This was pretty straightforward: the menu CSS was previously all in one SCSS partial so I broke it up into three SCSS partials: 
 
 {% highlight scss %}
 /* _menu.scss */
@@ -51,9 +43,11 @@ Currently, the desktop and mobile menus run off almost completely separate code 
 @import 'desktop';
 {% endhighlight %}
 
+Currently, the desktop and mobile menus run off almost completely separate code and the small amount of code shared is in `_base.scss`. To implement the flex grid, I would mainly be editing the desktop and base menus so the split made the code more maintainable and easier to read.
+
 ## Setting up flex grid
 
-As previously mentioned, the menu was originally written using a Foundation (float) grid. Because this only controls the widths, floats and clearing for each column, all other elements needed to be manually styled. For example, each <span class="inline-code">`<ul>`</span> list below's <span class="inline-code">`<li>`</span> items needed to be styled with <span class="inline-code">`display: inline-block`</span> to make the menu horizontal. 
+As previously mentioned, the menu was originally written using a Foundation (float) grid. Because this only controls the widths, floats and clearing for each column, all other elements needed to be manually styled. For example, each unordered list below's list items needed to be styled with <code class="language-scss">display: inline-block</code> to make the menu horizontal. 
 
 With the new flex grid structure, neither the floats nor inline styling were necessary, because the flex grid does this for you. This is easier to manage and scale. 
 
@@ -77,7 +71,7 @@ With the new flex grid structure, neither the floats nor inline styling were nec
 
 For the SCSS, most of it made sense after reading the flex grid documentation mentioned above. 
 
-The most confusing property related to the flex grid is [flex](https://developer.mozilla.org/en-US/docs/Web/CSS/flex). The two most frequently used styles are <span class="inline-code">`flex: auto`</span> and <span class="inline-code">`flex: initial`</span>. <span class="inline-code">`auto`</span> grows or shrinks according to the free space in the container while <span class="inline-code">`flex: initial`</span> only shrinks to fill the minimum size of the container. Both styles are used on <span class="inline-code">`.menu-content-wrapper`</span>, which wraps both menus. <span class="inline-code">`initial`</span> is used on mobile screens while <span class="inline-code">`auto`</span> is used on medium and large screens. 
+To me, the most confusing property related to flex grid is [flex](https://developer.mozilla.org/en-US/docs/Web/CSS/flex). The two most frequently used styles are <code class="language-scss">flex: auto</code> and <code class="language-scss">flex: initial</code>. <code class="language-scss">auto</code> grows or shrinks according to the free space in the container while <code class="language-scss">initial</code> only shrinks to fill the minimum size of the container. Both styles are used on <code class="language-scss">.menu-content-wrapper</code>, which wraps both menus. <code class="language-scss">initial</code> is used on mobile screens while <code class="language-scss">auto</code> is used on medium and large screens. 
 
 {% highlight scss %}
 .site-menu-inner {
@@ -114,7 +108,7 @@ So far, the changes to the menu haven't changed what it actually looks like. But
 ![medium menu after](/img/flex_menu/medium_menu_after.png)
 <span class="caption">After (on smaller desktop screens)</span>
 
-The first thing to change was the **sub menu CTAs** (the menu on the right). To account for the thinner screen width, I removed the CTA for "search" because the magnifying glass is fairly universally known to represent "search". I considered removing the CTA for the newsletter signup link as well but I don't think the email icon makes much sense without "signup". 
+The first thing to change was the **sub menu CTAs** (the menu on the right). To account for the thinner screen width, I removed the CTA for "search" because the magnifying glass is fairly universally known to represent "search". I considered removing the CTA for the newsletter signup link as well but I don't think the email icon makes much sense without "sign up". 
 
 The other element to address was the **"Topics" menu**. On desktop, the "Topics" menu is visible at the top of the page but changes to a dropdown on scroll (see screenshot above). It is also a horizontal menu. I knew on a medium-sized screen, all the items in the menu wouldn't fit horizontally so it should be vertical.
 
