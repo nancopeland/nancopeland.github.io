@@ -34,16 +34,22 @@ The Hacker Noon article mentions that "Flexbox is made for one dimensional layou
 
 ## Reassessing the menu SCSS
 
-First, I broke up the menu SCSS so it was easier to manage. This was pretty straightforward: the menu CSS was previously all in one SCSS partial so I broke it up into three partials: <span class="inline-code">`_base.scss`</span>, <span class="inline-code">`_desktop.scss`</span> and <span class="inline-code">`_mobile.scss`</span>. 
+First, I broke up the menu SCSS so it was easier to manage. This was pretty straightforward: the menu CSS was previously all in one SCSS partial so I broke it up into three partials: 
+
+{% highlight scss %}
+_base.scss
+_desktop.scss
+_mobile.scss
+{% endhighlight %}
 
 Currently, the desktop and mobile menus run off almost completely separate code and the small amount of code shared is in `_base.scss`. To implement the flex grid, I would mainly be editing the desktop and base menus so the split made the code more maintainable and easier to read.
 
-<code>
+{% highlight scss %}
 /* _menu.scss */
 @import 'base'; 
 @import 'mobile';
 @import 'desktop';
-</code>
+{% endhighlight %}
 
 ## Setting up flex grid
 
@@ -51,7 +57,7 @@ As previously mentioned, the menu was originally written using a Foundation (flo
 
 With the new flex grid structure, neither the floats nor inline styling were necessary, because the flex grid does this for you. This is easier to manage and scale. 
 
-```
+{% highlight html %}
 <nav class="site-menu">
     <div class="site-menu-inner">
         <div class="menu-content-wrapper">
@@ -67,13 +73,13 @@ With the new flex grid structure, neither the floats nor inline styling were nec
         </div>
     </div>
 </nav>
-```
+{% endhighlight %}
 
 For the SCSS, most of it made sense after reading the flex grid documentation mentioned above. 
 
 The most confusing property related to the flex grid is [flex](https://developer.mozilla.org/en-US/docs/Web/CSS/flex). The two most frequently used styles are <span class="inline-code">`flex: auto`</span> and <span class="inline-code">`flex: initial`</span>. <span class="inline-code">`auto`</span> grows or shrinks according to the free space in the container while <span class="inline-code">`flex: initial`</span> only shrinks to fill the minimum size of the container. Both styles are used on <span class="inline-code">`.menu-content-wrapper`</span>, which wraps both menus. <span class="inline-code">`initial`</span> is used on mobile screens while <span class="inline-code">`auto`</span> is used on medium and large screens. 
 
-```
+{% highlight scss %}
 .site-menu-inner {
     align-items: center; // vertically centers all items
     display: flex; 
@@ -96,7 +102,7 @@ The most confusing property related to the flex grid is [flex](https://developer
 .desktop-menu-sub {
     display: flex; 
 }
-```
+{% endhighlight %}
 
 ## Making the flex grid responsive
 

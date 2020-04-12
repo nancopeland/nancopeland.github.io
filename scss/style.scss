@@ -8,7 +8,6 @@ $turquoise: #1adbd3;
 $turquoise-light: lighten($turquoise, 47%);
 $indigo: #4C00FE; 
 
-/******** global **********/
 ::selection {
 	background-color: mix(white, $indigo, 90%);
 }
@@ -26,6 +25,11 @@ body {
 		width: 60%; 
 	}  
 }
+
+// theme for highlighting code
+@import 'prism-material-dark';
+
+/******** global **********/
 h1 {
 	font-size: 2.25rem;
 	margin-bottom: .5rem; 

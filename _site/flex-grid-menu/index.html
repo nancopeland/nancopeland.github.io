@@ -35,58 +35,17 @@
 <p><img src="/img/flex_menu/flex_support.png" alt="flex grid support">
 <span class="caption">Flex grid support, screenshot from <a href="https://caniuse.com/#feat=flexbox">Can I Use</a></span></p>
 <h2>Reassessing the menu SCSS</h2>
-<p>First, I broke up the menu SCSS so it was easier to manage. This was pretty straightforward: the menu CSS was previously all in one SCSS partial so I broke it up into three partials: <span class="inline-code"><code>_base.scss</code></span>, <span class="inline-code"><code>_desktop.scss</code></span> and <span class="inline-code"><code>_mobile.scss</code></span>.</p>
+<p>First, I broke up the menu SCSS so it was easier to manage. This was pretty straightforward: the menu CSS was previously all in one SCSS partial so I broke it up into three partials:</p>
+<pre class="language-scss"><code class="language-scss">_base.scss<br>_desktop.scss<br>_mobile.scss</code></pre>
 <p>Currently, the desktop and mobile menus run off almost completely separate code and the small amount of code shared is in <code>_base.scss</code>. To implement the flex grid, I would mainly be editing the desktop and base menus so the split made the code more maintainable and easier to read.</p>
-<code>
-/* _menu.scss */
-@import 'base'; 
-@import 'mobile';
-@import 'desktop';
-</code>
+<pre class="language-scss"><code class="language-scss"><span class="token comment">/* _menu.scss */</span><br><span class="token keyword">@import</span> <span class="token string">'base'</span><span class="token punctuation">;</span> <br><span class="token keyword">@import</span> <span class="token string">'mobile'</span><span class="token punctuation">;</span><br><span class="token keyword">@import</span> <span class="token string">'desktop'</span><span class="token punctuation">;</span></code></pre>
 <h2>Setting up flex grid</h2>
 <p>As previously mentioned, the menu was originally written using a Foundation (float) grid. Because this only controls the widths, floats and clearing for each column, all other elements needed to be manually styled. For example, each <span class="inline-code"><code>&lt;ul&gt;</code></span> list below's <span class="inline-code"><code>&lt;li&gt;</code></span> items needed to be styled with <span class="inline-code"><code>display: inline-block</code></span> to make the menu horizontal.</p>
 <p>With the new flex grid structure, neither the floats nor inline styling were necessary, because the flex grid does this for you. This is easier to manage and scale.</p>
-<pre><code>&lt;nav class=&quot;site-menu&quot;&gt;
-    &lt;div class=&quot;site-menu-inner&quot;&gt;
-        &lt;div class=&quot;menu-content-wrapper&quot;&gt;
-            &lt;ul class=&quot;desktop-menu-main&quot;&gt;
-                &lt;!-- desktop menu, not visible on mobile --&gt;
-            &lt;/ul&gt;
-            &lt;button class=&quot;mobile-menu-toggle&quot;&gt;
-                &lt;!-- mobile menu toggle icon, not visible on desktop --&gt;
-            &lt;/button&gt;
-            &lt;ul class=&quot;desktop-menu-sub list-no-bullets&quot;&gt;
-                &lt;!-- sub desktop menu, not visible on mobile --&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/nav&gt;
-</code></pre>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nav</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>site-menu<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>site-menu-inner<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><br>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>menu-content-wrapper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><br>            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>desktop-menu-main<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><br>                <span class="token comment">&lt;!-- desktop menu, not visible on mobile --></span><br>            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span><br>            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>mobile-menu-toggle<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><br>                <span class="token comment">&lt;!-- mobile menu toggle icon, not visible on desktop --></span><br>            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span><br>            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>desktop-menu-sub list-no-bullets<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><br>                <span class="token comment">&lt;!-- sub desktop menu, not visible on mobile --></span><br>            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span><br>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nav</span><span class="token punctuation">></span></span></code></pre>
 <p>For the SCSS, most of it made sense after reading the flex grid documentation mentioned above.</p>
 <p>The most confusing property related to the flex grid is <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex">flex</a>. The two most frequently used styles are <span class="inline-code"><code>flex: auto</code></span> and <span class="inline-code"><code>flex: initial</code></span>. <span class="inline-code"><code>auto</code></span> grows or shrinks according to the free space in the container while <span class="inline-code"><code>flex: initial</code></span> only shrinks to fill the minimum size of the container. Both styles are used on <span class="inline-code"><code>.menu-content-wrapper</code></span>, which wraps both menus. <span class="inline-code"><code>initial</code></span> is used on mobile screens while <span class="inline-code"><code>auto</code></span> is used on medium and large screens.</p>
-<pre><code>.site-menu-inner {
-    align-items: center; // vertically centers all items
-    display: flex; 
-    height: 55px;
-    justify-content: space-between; // added so mobile menu stays on the right
-    margin: 0 auto; 
-    max-width: 75rem; 
-} 
-.menu-content-wrapper {
-    display: flex;
-    justify-content: space-between;
-    flex: initial; // initial is flex: 0 1 auto;
-}
-@media screen and (min-width: $menu-breakpoint) {
-    .menu-content-wrapper {
-        flex: auto; // auto is flex: 1 1 auto; 
-    }
-}
-.desktop-menu-main,
-.desktop-menu-sub {
-    display: flex; 
-}
-</code></pre>
+<pre class="language-scss"><code class="language-scss"><span class="token selector">.site-menu-inner </span><span class="token punctuation">{</span><br>    <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span> <span class="token comment">// vertically centers all items</span><br>    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span> <br>    <span class="token property">height</span><span class="token punctuation">:</span> 55px<span class="token punctuation">;</span><br>    <span class="token property">justify-content</span><span class="token punctuation">:</span> space-between<span class="token punctuation">;</span> <span class="token comment">// added so mobile menu stays on the right</span><br>    <span class="token property">margin</span><span class="token punctuation">:</span> 0 auto<span class="token punctuation">;</span> <br>    <span class="token property">max-width</span><span class="token punctuation">:</span> 75rem<span class="token punctuation">;</span> <br><span class="token punctuation">}</span> <br><span class="token selector">.menu-content-wrapper </span><span class="token punctuation">{</span><br>    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span><br>    <span class="token property">justify-content</span><span class="token punctuation">:</span> space-between<span class="token punctuation">;</span><br>    <span class="token property">flex</span><span class="token punctuation">:</span> initial<span class="token punctuation">;</span> <span class="token comment">// initial is flex: 0 1 auto;</span><br><span class="token punctuation">}</span><br><span class="token atrule"><span class="token rule">@media</span> screen <span class="token operator">and</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> <span class="token variable">$menu-breakpoint</span><span class="token punctuation">)</span></span> <span class="token punctuation">{</span><br>    <span class="token selector">.menu-content-wrapper </span><span class="token punctuation">{</span><br>        <span class="token property">flex</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span> <span class="token comment">// auto is flex: 1 1 auto; </span><br>    <span class="token punctuation">}</span><br><span class="token punctuation">}</span><br><span class="token selector">.desktop-menu-main,<br>.desktop-menu-sub </span><span class="token punctuation">{</span><br>    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span> <br><span class="token punctuation">}</span></code></pre>
 <h2>Making the flex grid responsive</h2>
 <p>So far, the changes to the menu haven't changed what it actually looks like. But, as previously stated, one of the goals of this project was to make the menu more accessible on smaller screen sizes. Making it work on mobile is a different project but what about tablets and small laptops? This was going to involve some slight visual changes.</p>
 <p><img src="/img/flex_menu/medium_menu_before.png" alt="medium menu before">
