@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+/******** colors **********/
 $dark-grey: #333333;
 $grey: #666666;
 $light-grey: #dddddd;
@@ -7,14 +8,13 @@ $turquoise: #1adbd3;
 $turquoise-light: lighten($turquoise, 47%);
 $indigo: #4C00FE; 
 
+/******** global **********/
 ::selection {
 	background-color: mix(white, $indigo, 90%);
 }
-
 body, h1, h2, h3, h4, h5, h6, ul, ol, li, p {
 	font-family: 'covik-sans', 'Helvetica', sans-serif; 
 }
-
 body {
 	font-size: 20px;
 	margin: 0 1rem; 
@@ -43,6 +43,9 @@ img {
     height: auto;
     max-width: 100%;
     vertical-align: middle;
+}
+li {
+	margin-bottom: .5rem; 
 }
 
 /******** nav **********/
