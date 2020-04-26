@@ -11,6 +11,7 @@ nicedate: January 06, 2018
 I recently redesigned the [Library page](https://www.biopharmadive.com/library/) for each of Industry Dive's publications with the help of the dev team to better showcase the [Dive Brand Studio's](https://www.industrydive.com/brandstudio/) content.
 
 ![page in ipad mockup](/img/library_page/page_hands_header.jpg)
+<span class="caption">Finished library page on an iPad</span>
 
 ## Background
 
