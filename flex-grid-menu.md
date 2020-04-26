@@ -11,6 +11,7 @@ nicedate: March 25, 2018
 I re-coded the [menu](https://www.retaildive.com/) for all Industry Dive products using a flex grid. This resulted in a more accessible menu with code that scales better for growth.
 
 ![menu](/img/flex_menu/menu.png)
+<span class="caption">Updated menu</span>
 
 ## Goals
 
