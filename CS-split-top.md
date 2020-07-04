@@ -108,11 +108,11 @@ For the third option, dev said a new template was easier but they could make it 
 
 Based on the meeting, I ticketed this new feature and, after many sprints, dev started working on it. The biggest challenges we faced in development were image-related. 
 
-Initially, the developer, Jonathan Zuckerman (JZ), separated "layout" and "image" into separate tabs in the CMS editing experience. I thought this was a good idea but we realized that the images needed to be different based on layout (horizontal vs. square/vertical image). It was confusing having the image tab be reliant on the layout tab but the image content was hidden until you clicked on the tab. 
+Initially, the developer, [Jonathan Zuckerman](https://twitter.com/jon47) (JZ), separated "layout" and "image" into separate tabs in the CMS editing experience. I thought this was a good idea but we realized that the images needed to be different based on layout (horizontal vs. square/vertical image). It was confusing having the image tab be reliant on the layout tab but the image content was hidden until you clicked on the tab. 
 
 I checked with the art team about this decision (because they are primary people making layout and image decisions) and they said it didn't really matter if layout and image were separated and it would be nice to see all the information at once. So, we put all the options in one tab. 
 
-![podcasts homepage](/img/CS_split_top/split-top_bong-joon-ho.gif)
+![layout switching for story about bong joon-ho](/img/CS_split_top/split-top_bong-joon-ho.gif)
 <span class="caption">Switching the layout for <a href="https://slate.com/culture/2019/10/bong-joon-ho-profile-parasite-movie-spielberg-oscars.html">this story</a></span>
 
 Another issue was the image cropping on desktop vs. mobile. Initially when I mocked it up, I thought the full-width layout and the split-top have the same crop on mobile (horizontal image). But, in development, JZ said it was much easier to keep the same crop across all screen sizes. I thought this also looked good so we went with this. 
