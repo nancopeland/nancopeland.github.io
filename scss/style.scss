@@ -5,9 +5,10 @@ $dark-grey: #333333;
 $grey: #666666;
 $light-grey: #dddddd;
 $indigo: #4C00FE; 
+$indigo-light: mix(white, $indigo, 90%); 
 
 ::selection {
-	background-color: mix(white, $indigo, 90%);
+	background-color: $indigo-light;
 }
 body, h1, h2, h3, h4, h5, h6, ul, ol, li, p {
 	font-family: 'covik-sans', 'Helvetica', sans-serif; 
@@ -30,7 +31,8 @@ body {
 
 /******** global **********/
 h1 {
-	font-size: 2.25rem;
+	font-size: 3rem;
+	line-height: 1; 
 	margin-bottom: .5rem; 
 }
 p {

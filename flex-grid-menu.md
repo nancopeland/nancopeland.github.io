@@ -44,7 +44,7 @@ First, I broke up the menu SCSS so it was easier to manage. This was pretty stra
 @import 'desktop';
 {% endhighlight %}
 
-Currently, the desktop and mobile menus run off almost completely separate code and the small amount of code shared is in `_base.scss`. To implement the flex grid, I would mainly be editing the desktop and base menus so the split made the code more maintainable and easier to read.
+Currently, the desktop and mobile menus run off almost completely separate code and the small amount of code shared is in <code class="language-scss">_base.scss</code>. To implement the flex grid, I would mainly be editing the desktop and base menus so the split made the code more maintainable and easier to read.
 
 ## Setting up flex grid
 

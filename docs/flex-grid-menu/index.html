@@ -1,21 +1,20 @@
 <!doctype html>
 <html lang="en">
   	<head>
-  		<meta charset="UTF-8">
-    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    	<meta name="viewport" content="width=device-width, initial-scale=1">
-    	<!-- need to add favicon -->
-    	<link rel="icon" type="image/png" href="img/favicon.png">
-		<title>nan copeland dot com</title>
-		<meta name="description" content="Nan Copeland&#39;s personal site">
-		<!-- covik sans --> 
-		<link rel="stylesheet" href="https://use.typekit.net/ylp6uud.css">
-		<link rel="stylesheet" href="/css/style.css">
-	</head>
+    		<meta charset="UTF-8">
+      	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+      	<meta name="viewport" content="width=device-width, initial-scale=1">
+      	<link rel="icon" type="image/png" href="img/favicon.png">
+  		<title>nan copeland dot com</title>
+  		<meta name="description" content="Nan Copeland&#39;s personal site">
+  		<!-- covik sans --> 
+  		<link rel="stylesheet" href="https://use.typekit.net/ylp6uud.css">
+  		<link rel="stylesheet" href="/css/style.css">
+  	</head>
   	<body>
   		<nav>
-			<a href="/">👀 Home</a>
-		</nav>
+			 <a href="/">👀 Home</a>
+		  </nav>
     	<article>
 	<h1>Flex grid menu</h1>
 <p class="date">March 25, 2018</p>
@@ -38,7 +37,7 @@
 <h2>Reassessing the menu SCSS</h2>
 <p>First, I broke up the menu SCSS so it was easier to manage. This was pretty straightforward: the menu CSS was previously all in one SCSS partial so I broke it up into three SCSS partials:</p>
 <pre class="language-scss"><code class="language-scss"><span class="token comment">/* _menu.scss */</span><br><span class="token keyword">@import</span> <span class="token string">'base'</span><span class="token punctuation">;</span> <br><span class="token keyword">@import</span> <span class="token string">'mobile'</span><span class="token punctuation">;</span><br><span class="token keyword">@import</span> <span class="token string">'desktop'</span><span class="token punctuation">;</span></code></pre>
-<p>Currently, the desktop and mobile menus run off almost completely separate code and the small amount of code shared is in <code>_base.scss</code>. To implement the flex grid, I would mainly be editing the desktop and base menus so the split made the code more maintainable and easier to read.</p>
+<p>Currently, the desktop and mobile menus run off almost completely separate code and the small amount of code shared is in <code class="language-scss">_base.scss</code>. To implement the flex grid, I would mainly be editing the desktop and base menus so the split made the code more maintainable and easier to read.</p>
 <h2>Setting up flex grid</h2>
 <p>As previously mentioned, the menu was originally written using a Foundation (float) grid. Because this only controls the widths, floats and clearing for each column, all other elements needed to be manually styled. For example, each unordered list below's list items needed to be styled with <code class="language-scss">display: inline-block</code> to make the menu horizontal.</p>
 <p>With the new flex grid structure, neither the floats nor inline styling were necessary, because the flex grid does this for you. This is easier to manage and scale.</p>

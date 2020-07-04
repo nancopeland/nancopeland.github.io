@@ -180,7 +180,8 @@ pre[class*="language-"] {
 
 /******** global **********/
 h1 {
-  font-size: 2.25rem;
+  font-size: 3rem;
+  line-height: 1;
   margin-bottom: .5rem; }
 
 p {
