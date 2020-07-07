@@ -1,6 +1,6 @@
 ---
 layout: post-layout.njk
-tags: slate
+tags: 
 title: Slate paywall
 description: tk tk tk
 nicedate: July 04, 2020
