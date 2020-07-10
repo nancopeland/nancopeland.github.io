@@ -41,7 +41,7 @@ The initial idea for this was just as a Hack Day project but once both the dev t
 
 After it was decided everyone wanted to work on this, I started mocking up past stories where I thought the art might have looked better in this layout. 
 
-For these mocks, I used a setting that the current cover story template has called "theme color." The "theme color" allows someone on the art team to set a color (that usually corresponds with the art) and the link underlines and other details on the page change to this color to make the template feel a bit more custom. I thought this would be a nice thing to use in this prospective new layout.
+For these mocks, I used a setting that currently exists called "theme color." The "theme color" allows someone on the art team to set a color (that usually corresponds with the art) and the link underlines and other details on the page change to this color to make the template feel a bit more custom. I thought this would be a nice thing to use in this prospective new layout.
 
 <div class="img-flex-wrapper">
 	<div class="img-flex-50">
@@ -68,10 +68,10 @@ Although the theme color usually looked good, some cover stories had a more seri
 
 ## Workflow
 
-After I mocked up a bunch of different articles, I met with the dev team to decide how this would get built the CMS, Clay: 
+After I mocked up a bunch of different articles, I met with the dev team to decide how this would get built in [Clay](https://clay.nymag.com/) (the CMS): 
 
 1. Is the photo an <code class="language-html">img</code> or <code class="language-scss">background-image</code>?
-2. How is the text color decided? How is the background color decide? How do we make sure this relationship is has enough color contrast??
+2. How is the text color decided? How is the background color decide? How do we make sure this relationship is has enough color contrast?
 3. How does the new template work with the old template? Should the new template be an option in the main CS template or should the new template be its own template? 
 
 For the first question, we decided to make the image a <code class="language-scss">background-image</code>.  The old template's image is a regular <code class="language-html">img</code> so I thought dev might be a preference for that because the new template's image is 50% of the page width and needs to grow and shrink to fill the space, <code class="language-scss">background-image</code> made more sense. 
@@ -102,7 +102,7 @@ CMS options for new layout:
 	<span class="caption">Settings in Clay, Slate's CMS</span>
 </div>
 
-For the third option, dev said a new template was easier but they could make it an option if that was a better experience. I talked to the art team and they preferred the new layout be an option in the current template instead of being its own template so they could toggle between two layouts (full-width img vs. split-top) to see what looked best. I also thought that this layout being incorporated into the current template would make sure it was used more often and not forgotten. 
+For the third option, dev said a new template was easier but they could make it an option if that was a better experience. I talked to the art team and they preferred the new layout be an option in the current template instead of being its own template so they could toggle between two layouts (full-width vs. split-top) to see what looked best. I also thought that this layout being incorporated into the current template would make sure it was used more often and not forgotten. 
 
 ## Implementation & working with dev
 
