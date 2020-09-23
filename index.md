@@ -3,10 +3,7 @@ layout: layout.njk
 title: Index
 ---
 
-<div class="intro">
-	<p>Hi, I'm Nan and I'm an interaction designer at <a href="https://slate.com/">Slate</a> in Brooklyn.</p>
-	<p>I enjoy talking to users, data visualization and designing in the browser.</p>
-</div>
+<p class="intro"><strong>Hi, I'm Nan and I'm an interaction designer at <a href="https://slate.com/">Slate</a> in Brooklyn. I enjoy talking to users, working with developers and designing in the browser.</strong></p>
 
 <p>Here are some projects I've worked on at <a href="https://slate.com/">Slate</a>...</p>
 
