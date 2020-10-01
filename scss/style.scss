@@ -17,11 +17,11 @@ body {
 	font-size: 20px;
 	margin: 0 1rem; 
 	max-width: 900px; 
-	@media (min-width: 40em) {
+	@media (min-width: 728px) {
 		margin: 0 auto; 
 		width: 80%; 
 	}
-	@media (min-width: 64em) {
+	@media (min-width: 1024px) {
 		width: 65%; 
 	}  
 }
@@ -53,7 +53,8 @@ video {
     max-width: 100%;
 }
 ul {
-	list-style: square; 
+	list-style: none; 
+	padding: 0; 
 }
 li {
 	margin-bottom: .5rem; 
@@ -84,9 +85,12 @@ footer {
 	margin-bottom: 3rem; 
 }
 .job-block {
-	display: grid; 
-	grid-column-gap: 1.5rem;
-    grid-template-columns: 50% 50%;
+	margin: 4rem 0; 
+    @media (min-width: 728px) {
+		display: grid; 
+		grid-column-gap: 1.5rem;
+	    grid-template-columns: 50% 50%;
+	}
 }
 .block {
 	//width: 50%; 
@@ -165,7 +169,7 @@ article {
 	display: flex; 
 	flex-wrap: wrap;
 }
-@media (min-width: 40em) {
+@media (min-width: 728px) {
 	.img-flex-50 { 
 		width: calc(50% - 10px); 
 		&:nth-child(odd) {
