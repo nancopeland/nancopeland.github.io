@@ -34,7 +34,7 @@ title: Index
 </div>
 
 <div class="block">
-<p>Before Slate, I was a front-end designer at <a href="https://www.industrydive.com/">Industry Dive</a>, a media startup in Washington, D.C.</p>
+<p>Before Slate, I was a front-end designer at <a href="https://www.industrydive.com/">Industry Dive</a>, a media startup in Washington, D.C. I started as a graphic designer but slowly started contributing HTML and CSS to the site which turned into a title change to "Front-end Designer."</p>
 
 <ul>
 {%- for post in collections.id -%}
@@ -47,7 +47,7 @@ title: Index
 <!-- GA -->
 <section class="job-block">
 <div class="block">
-<p>I also took a user experience design class at <a href="https://generalassemb.ly/">General Assembly</a>.</p>
+<p>While working at Industry Dive, I took a user experience design class at <a href="https://generalassemb.ly/">General Assembly</a>. I had learned about how design was implemented with code but wanted to learn more about what I should do before starting the design part of the process.</p>
 
 <ul>
 {%- for post in collections.ga -%}
