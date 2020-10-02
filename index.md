@@ -47,7 +47,7 @@ title: Index
 <!-- GA -->
 <section class="job-block">
 <div class="block">
-<p>While working at Industry Dive, I took a user experience design class at <a href="https://generalassemb.ly/">General Assembly</a>. I had learned about how design was implemented with code but wanted to learn more about what I should do before starting the design part of the process.</p>
+<p>While working at Industry Dive, I took a user experience design class at <a href="https://generalassemb.ly/">General Assembly</a>. I had learned about how design was implemented with code but wanted to learn more about what I should do before starting the design process.</p>
 
 <ul>
 {%- for post in collections.ga -%}
