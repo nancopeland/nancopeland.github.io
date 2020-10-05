@@ -92,8 +92,10 @@ footer {
 	    grid-template-columns: 50% 50%;
 	}
 }
-.block {
-	//width: 50%; 
+@media (min-width: 728px) {
+	.order-1 {
+		order: -1; 
+	}
 }
 .project-link {
 	font-weight: bold;

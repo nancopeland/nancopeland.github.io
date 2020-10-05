@@ -28,11 +28,6 @@ title: Index
 
 <!-- ID -->
 <section class="job-block">
-
-<div class="block">
-	<img src="img/ID_sites.gif"/>
-</div>
-
 <div class="block">
 <p>Before Slate, I was a front-end designer at <a href="https://www.industrydive.com/">Industry Dive</a>, a media startup in Washington, D.C. I started as a graphic designer but slowly started contributing HTML and CSS to the site which turned into a title change to "front-end designer."</p>
 
@@ -41,6 +36,11 @@ title: Index
 	<li><a class="project-link" href="{{ post.url }}">{{ post.data.title }}</a></li>
 {%- endfor -%}
 </ul>
+</div>
+
+
+<div class="block order-1">
+	<img src="img/ID_sites.gif"/>
 </div>
 </section>
 
