@@ -1,6 +1,6 @@
 ---
 layout: post-layout.njk
-tags: 
+tags: slate
 title: New "cover story" layout
 description: tk tk tk
 nicedate: July 04, 2020
@@ -115,7 +115,7 @@ I checked with the art team about this decision (because they are primary people
 ![layout switching for story about bong joon-ho](/img/CS_split_top/split-top_bong-joon-ho.gif)
 <span class="caption">Switching the layout for <a href="https://slate.com/culture/2019/10/bong-joon-ho-profile-parasite-movie-spielberg-oscars.html">this story</a></span>
 
-Another issue was the image cropping on desktop vs. mobile. Initially when I mocked it up, I thought the full-width layout and the split-top have the same crop on mobile (horizontal image). But, in development, JZ said it was much easier to keep the same crop across all screen sizes. I thought this also looked good so we went with this. 
+Another issue was the image cropping on desktop vs. mobile. Initially when I mocked it up, I thought the full-width and split-top layouts would have the same crop on mobile (horizontal image). But, in development, JZ said it was much easier to keep the same crop across all screen sizes. I thought this also looked good so we went with this. 
 
 <div class="img-flex-wrapper">
 	<div class="img-flex-50">
@@ -127,4 +127,12 @@ Another issue was the image cropping on desktop vs. mobile. Initially when I moc
 		<span class="caption">Mobile view in production</span>
 	</div>
 </div>
+
+Development was lead by [Jonathan Zuckerman](https://twitter.com/jon47) and product management was lead by [Chris Schieffer](https://twitter.com/cschieffer). Big thanks to [Lisa Larson-Walker](https://twitter.com/lrsnwlkr) for the idea and reviewing the initial mocks and [Abby McIntyre](https://twitter.com/abbjmc), [Megan Wiegand](https://twitter.com/mwieg), [Holly Allen](https://twitter.com/hollyloo), [Natalie Matthews-Ramo](https://twitter.com/MatthewsRamo) and [Derreck Johnson](https://twitter.com/DeePhunk) for reviewing this many times during development. 
+
+## Usage
+
+So far, the split-top layout has been used in one cover story: 
+
+- [COVID school reopening](https://slate.com/human-interest/2020/07/reopening-schools-teachers-coronavirus-risks.html) by Dan Kois 
 
