@@ -1,6 +1,6 @@
 ---
 layout: layout.njk
-title: Index
+title: nan copeland dot com
 ---
 
 <p class="intro"><strong>Hi, I'm Nan and I'm an interaction designer at <a href="https://slate.com/">Slate</a> in Brooklyn. I enjoy talking to users, working with developers and designing in the browser.</strong></p>
