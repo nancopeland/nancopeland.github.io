@@ -34,7 +34,7 @@ title: Index
 </div>
 
 <div class="block">
-<p>Before Slate, I was a front-end designer at <a href="https://www.industrydive.com/">Industry Dive</a>, a media startup in Washington, D.C. I started as a graphic designer but slowly started contributing HTML and CSS to the site which turned into a title change to "Front-end Designer."</p>
+<p>Before Slate, I was a front-end designer at <a href="https://www.industrydive.com/">Industry Dive</a>, a media startup in Washington, D.C. I started as a graphic designer but slowly started contributing HTML and CSS to the site which turned into a title change to "front-end designer."</p>
 
 <ul>
 {%- for post in collections.id -%}
