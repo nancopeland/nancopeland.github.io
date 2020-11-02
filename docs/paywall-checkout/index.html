@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  	<head>
+  		<meta charset="UTF-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<link rel="icon" type="image/png" href="img/favicon.png">
+  		<title>User testing&amp;#58; paywall checkout</title>
+  		<meta name="description" content="Nan Copeland&#39;s personal site">
+  		<!-- typekit --> 
+  		<link rel="stylesheet" href="https://use.typekit.net/jcb8jba.css">
+  		<link rel="stylesheet" href="/css/style.css">
+  	</head>
+  	<body>
+  		<nav>
+			 <a href="/">👀 Home</a>
+		  </nav>
+    	<article>
+	<h1>User testing: paywall checkout</h1>
+<p class="date">November 02, 2020</p>
+<h2>Brief history</h2>
+<p>Over the past year, I've been working on the Slate paywall. After initially meeting with <a href="https://twitter.com/heidimoon">Heidi Strom Moon</a>, the product manager for the paywall, I broke out the project into three groups: site prompts, landing page &amp; checkout process and account management.</p>
+<p>Before mocking, I checked out a few other sites. All sites started with an &quot;offer&quot; landing page and then I was asked for my account and payment information. Some sites had the account and payment forms on the same page as the landing page and some sites took you to a different page. I mocked up these two flows for Slate but wasn't sure which one would make for a better user experience so I decided to do a few rounds of user testing.</p>
+<h2>User testing</h2>
+<p>Over the course of designing this flow, I did 6 rounds of user testing to get the checkout process optimized for Slate's readers:</p>
+<h3>1. <a href="https://projects.invisionapp.com/share/W5US9YA4QNY#/screens/392870677_1_page_-_1">1-page</a> vs. <a href="https://projects.invisionapp.com/share/W5US9YA4QNY#/screens/392875148_3_page_-_1">3-page</a></h3>
+<div class="img-flex-wrapper">
+	<div class="img-flex-50">
+		<img alt="checkout experience that stays on 1 page" src="/img/checkout/UT1_1page.gif">
+		<span class="caption"><a href="https://projects.invisionapp.com/share/W5US9YA4QNY#/screens/392870677_1_page_-_1">1-page checkout</a></span>
+	</div>
+	<div class="img-flex-50">
+		<img alt="checkout experience that is broken up into 3 pages" src="/img/checkout/UT1_3page.gif">
+		<span class="caption"><a href="https://projects.invisionapp.com/share/W5US9YA4QNY#/screens/392875148_3_page_-_1">3-page checkout</a></span>
+	</div>
+</div>
+<p>Users understood both 1-page and 3-page experiences but because people preferred the 1-page (and I preferred it), I went with 1-page.</p>
+<ol start="2">
+<li>
+<p><strong>Account creation <a href="https://www.sketch.com/s/60150400-a0d8-40bc-ab8f-c9d1e1ce7c98/a/2RgAr5/play">before</a> vs. <a href="https://www.sketch.com/s/60150400-a0d8-40bc-ab8f-c9d1e1ce7c98/a/dPQLMm/play">after</a> payment</strong> -
+Because users thought having account creation after payment was weird and the dev team was opposed to account creation not being explicitly linked to subscription, I decided to keep account creation first.</p>
+</li>
+<li>
+<p><strong>1-page <a href="https://projects.invisionapp.com/share/W5US9YA4QNY#/screens/397971678_1-Page_Steps_-_1">“stepped” layout</a></strong> -
+For the 1-page “stepped” experience test, no one had a hard time with this but 2 users (of 8) said they would have <strong>preferred the checkout form was on a different page</strong>.</p>
+</li>
+<li>
+<p><strong><a href="https://projects.invisionapp.com/share/W5US9YA4QNY#/screens/397971678_1-Page_Steps_-_LP">Forgot password</a> using &quot;stepped&quot; layout</strong> - For the “forgot password” test, I asked users to subscribe as if they already have an account but can’t remember their password. <strong>The users who went through the whole “forgot password”  thought it was straightforward.</strong></p>
+</li>
+<li>
+<p><strong><a href="https://slategroup.github.io/slate-prototypes/1-page.html">Coded 1-page “stepped” experience</a></strong> -
+Users, specifically older users, had varying degrees of difficulty (8 out of 10 users) logging into their account and subscribing. Because of this, I wondered if I could <strong>test this same flow and set of users with a coded 3-page experience and see if I got the same results.</strong> Accounts are always difficult, especially for older users, but i thought simplifying each step might help.</p>
+</li>
+<li>
+<p><strong><a href="https://slategroup.github.io/slate-prototypes/3-page_plans.html">Coded 3-page experience</a></strong> -
+4 users (of 10 total) had a bit or a lot of difficulty with this task and only 2 of those users were in the “older” category. From this, I assumed the <strong>3-page experience was easier to understand for users trying to go from the “create account” form to the “log in” form.</strong></p>
+</li>
+</ol>
+<p><a href="/img/checkout/paywall_checkout_user_testing_1-5_summary.pdf">See PDF</a> for more detail descriptions of each test and see coded prototypes <a href="https://slategroup.github.io/slate-prototypes/">here</a>.</p>
+<h2>Decision</h2>
+<p>Based on the user feedback, I decided to go with the 3-page checkout process with very clear links to “log in” and “create account” to toggle between the two forms. I think this is more easily understood by users, specifically “older” ones (which Slate has more of than “young” ones).</p>
+<p><img src="/img/paywall/paywall_checkout-demo.gif" alt="paywall checkout flow">
+<span class="caption">Click thru these mocks <a href="https://www.sketch.com/s/e162d784-4d85-4826-9954-53825ad7d03e/a/mQgwPJ/play">here</a></span></p>
+
+</article>
+    	<footer>
+    		<p><a href="/">Home</a> • <a href="/img/resume_nan_copeland.pdf">Download Resume</a></p>
+        <p>This site was created using <a href="https://www.11ty.dev/">11ty</a>. It uses <a href="https://fonts.adobe.com/fonts/franklin-gothic-urw">Franklin Gothic URW</a> from <a href="https://www.urwtype.com/en/">URW Type Foundry</a> via <a href="https://fonts.adobe.com/">Adobe Fonts</a>.</p>
+    	</footer>
+  	</body>
+</html>
