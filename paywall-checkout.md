@@ -86,4 +86,4 @@ After many more rounds of wireframing and mocking, the checkout process ended up
 ![paywall checkout flow](/img/paywall/paywall_checkout-demo.gif)
 <span class="caption">Click thru these mocks <a href="https://www.sketch.com/s/e162d784-4d85-4826-9954-53825ad7d03e/a/mQgwPJ/play">here</a></span>
 
-Thank you to product manager [Heidi Strom Moon](https://twitter.com/heidimoon) who reviewed the many rounds of testing! 
+Thank you to product manager [Heidi Strom-Moon](https://twitter.com/heidimoon) who reviewed the many rounds of testing! 
