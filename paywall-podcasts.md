@@ -79,7 +79,7 @@ For the next round, I decided to test the interim experience vs. the tabs experi
 		<span class="caption">Interim Supporting Cast experience on Slate.com</span> 
 	</div>
 	<div class="img-flex-50">
-		<img alt="podcast feed experience on mobile using tabs to differentiate between screen size" src="/img/paywall_podcasts/1_tabs_mobile.png">
+		<img src="/img/paywall_podcasts/1_tabs_mobile.png" alt="podcast feed experience on mobile using tabs to differentiate between screen size" />
 		<span class="caption">New experience with tabs</span>
 	</div>
 </div>
@@ -93,8 +93,41 @@ For the first test on podcast pages, I decided to just put the tabs unit from th
 ![new podcast feed experience on podcast show page](/img/paywall_podcasts/3_tabs_show_page.png)
 <span class="caption">New podcast feed experience on <a href="https://slate.com/podcasts/decoder-ring">Decoder Ring</a> show page</span>
 
+Over a third of the users stated they were confused by the number of options (both choosing their device tab and choosing how they wanted to subscribe). I thought maybe there could be a more subtle way to choose your device so the number of options weren't as overwhelming. 
+
+I decided to try testing a subtle link floated to the right of the page labelled with the negative version of the phrases used before so hopefully people would ignore it if it didn't apply to them. 
+
+![link experience on show page on desktop](/img/paywall_podcasts/4_link_desktop.png)
+<span class="caption">Show page on desktop with subtle link</span>
+
+<div class="img-flex-wrapper">
+	<div class="img-flex-50">
+		<img src="/img/paywall_podcasts/4_link_tablet.png" alt="link experience on show page on tablet" />
+		<span class="caption">Show page on tablet with subtle link</span> 
+	</div>
+	<div class="img-flex-50">
+		<img src="/img/paywall_podcasts/4_link_mobile.png" alt="link experience on show page on mobile" />
+		<span class="caption">Show page on mobile with subtle link</span>
+	</div>
+</div>
+
+Users found this experience to be about as confusing as the previous one. I decided I could make the link even more subtle and then user test it when it was actually live to get better results. It is always hard to test something that depends on the user clicking an app link (to subscribe to the podcast) when the app buttons aren't actually linked. 
+
+
 ## Decision
 
+This is where the mock ended up before going to production. The link to switch to the alternate experience is grouped with the FAQ because if someone couldn't find what they were looking for, they'd look there. 
+
+<div class="img-flex-wrapper">
+	<div class="img-flex-50">
+		<img src="/img/paywall_podcasts/final_account_ctr.png" alt="final mock for account center" />
+		<span class="caption">Final mock for account center podcast page</span> 
+	</div>
+	<div class="img-flex-50">
+		<img src="/img/paywall_podcasts/final_show_page.png" alt="final mock for show page" />
+		<span class="caption">Final mock for show page</span>
+	</div>
+</div>
 
 
-Thank you to product managers [Heidi Strom-Moon](https://twitter.com/heidimoon) and [Chris Schieffer](https://twitter.com/cschieffer) who reviewed the many rounds of testing! 
+Thank you to product managers [Heidi Strom-Moon](https://twitter.com/heidimoon) and [Chris Schieffer](https://twitter.com/cschieffer) who reviewed the many rounds of testing and to developer [Jonathan Zuckerman](https://twitter.com/jon47) for guidance on accessibility. 
