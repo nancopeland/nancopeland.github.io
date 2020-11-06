@@ -1,6 +1,6 @@
 ---
 layout: post-layout.njk
-tags: 
+tags: slate
 title: User testing&#58; paywall checkout
 description: tk tk tk
 nicedate: November 02, 2020
