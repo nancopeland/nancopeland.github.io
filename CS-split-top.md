@@ -132,7 +132,8 @@ Development was lead by [Jonathan Zuckerman](https://twitter.com/jon47) and prod
 
 ## Usage
 
-So far, the split-top layout has been used in one cover story: 
+Here are some examples of the split-top layout being used: 
 
-- [COVID school reopening](https://slate.com/human-interest/2020/07/reopening-schools-teachers-coronavirus-risks.html) by Dan Kois 
+- [COVID school reopening](https://slate.com/human-interest/2020/07/reopening-schools-teachers-coronavirus-risks.html) by Dan Kois, July 19, 2020
+- [Slate's Favorite Podcast Episodes of 2020](https://slate.com/human-interest/2020/11/favorite-podcast-episodes-2020.html) by various Slate staff, December 01, 2020
 
