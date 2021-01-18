@@ -22,7 +22,7 @@ title: nan copeland dot com
 		<source type="video/mp4" src="img/slate_scroll.mp4"></source>
 		<p>Your browser does not support the video element.</p>
 	</video>-->
-	<img src="img/slate_scroll.gif"/>
+	<img alt="scrolling down slate's homepage" src="img/slate_scroll.gif"/>
 </div>
 </section>
 
@@ -40,7 +40,7 @@ title: nan copeland dot com
 
 
 <div class="block order-1">
-	<img src="img/ID_sites.gif"/>
+	<img alt="industry dive websites stacked on top of each other" src="img/ID_sites.gif"/>
 </div>
 </section>
 
@@ -57,7 +57,7 @@ title: nan copeland dot com
 </div>
 
 <div class="block">
-	<img src="img/gig_flow.gif"/>
+	<img alt="prototype of the app I created in my General Assembly class" src="img/gig_flow.gif"/>
 </div>
 </section>
 

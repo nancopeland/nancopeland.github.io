@@ -130,6 +130,9 @@ After many iterations, I decided on a final product that many users found clear 
 	</div>
 </div>
 
+![prototype of the GIG app I created](/img/gig_flow.gif)
+<span class="caption">prototype of how buying a ticket would work in the GIG app</span>
+
 What I built is definitely the minimum to meet the user's needs. Some users suggested a few features that could be added in a future version of the app: 
 * **“Favorite” feature** - for shows you might want to attend but don’t want to commit to right away
 * **“Add to calendar” feature** - option to “add to calendar” (iCal or Google) after you’ve purchased a ticket
