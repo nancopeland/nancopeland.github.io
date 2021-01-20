@@ -51,49 +51,94 @@ Overall, I learned that Slate iOS users opened the app because they want to read
 - 3 users use the swiping between stories/sections feature
 
 **Navigation**
-- 5 users said the menu could use better content organization 
-- 7 users said the menu is simple and easy to use
-- 2 users were very passionate about adding search to the app (it exists but is difficult to find) and making it work
-- 3 users mentioned how they like the “save” feature
+- 5 out of 10 users said the menu could use better content organization 
+- 7 out of 10 users said the menu is simple and easy to use
+- 2 out of 10 users were very passionate about adding search to the app (it exists but is difficult to find) and making it work
+- 3 out of 10 users mentioned how they like the “save” feature
 
 **Podcasts**
-- 8 users were confused by the headphones icon (the headphones icon is how you get to the Podcasts section), some users thought this icon was for accessibility 
+- 8 out of 10 users were confused by the headphones icon (the headphones icon is how you get to the Podcasts section), some users thought this icon was for accessibility 
 - Most of these users looked in the regular menu first for “Podcasts” 
-- 5 users thought the podcasts page should land on “Shows” first instead of “Latest” 
-- 3 users said linking from Slate’s app to the show in podcast apps would be helpful
+- Half of the users thought the podcasts page should land on “Shows” first instead of “Latest” 
+- 3 out of 10 users said linking from Slate’s app to the show in podcast apps would be helpful
 
 **Slate Plus**
-- 7 users said their benefits (ad-free podcasts, ad-free reading experience in the app) are not clear from the current UX of the app
+- 7 out of 10 users said their benefits (ad-free podcasts, ad-free reading experience in the app) are not clear from the current UX of the app
 - Some users noted that the Slate Plus landing page experience (the landing page pops up after clicking into a Slate Plus article) has the info they expected but they didn’t expect it in that location in the app
 - Many users were expecting a sort of landing page on the “Slate Plus” page instead of a stream of content
-- 4 users had a hard time finding “Slate Plus” in the menu: a few users scrolled past the “Slate Plus” page and looked at the Slate Plus FAQs page for Slate Plus info
+- 4 out of 10 users had a hard time finding “Slate Plus” in the menu: a few users scrolled past the “Slate Plus” page and looked at the FAQs page for Slate Plus info
+
+## Wireframes and mocks
 
 From the above findings, I decided on the following features & recommendations for the redesign: 
 
-**Homepage vs. Recent Feed**
-- The home screen should pull in the hierarchy from slate.com (shouldn't look like a regular feed in the app) but the same amount of info for each story that is currently displayed in the feeds in the app
+**App Home**
+- This is the most-used page for current users
+- Users use this page ("most recent" feed) the most but were expecting something "more curated" so I think the home screen should pull in the hierarchy and editorially-picked stories from slate.com
 - Keep the swiping feature because it seems well-liked
-- It should be easy to navigate to a “Most Recent” (and “Most Popular” feed) but the homepage is separate
+- It should be easy to navigate to a “Most Recent” (because people use it so much currently) but the homepage is separate
+
+<div class="img-flex-wrapper">
+	<div class="img-flex-33">
+		<img alt="App homepage with top stories vs. recent filter and search in top right" src="/img/slate_ios_app/home_wireframe_1.png">
+		<span class="caption">App homepage with "top stories" vs. "recent" filter and search in top right</span>
+	</div>
+	<div class="img-flex-33">
+		<img alt="App homepage with bottom nav and Slate Plus promo across the top" src="/img/slate_ios_app/home_wireframe_2.png">
+		<span class="caption">App homepage with bottom nav and Slate Plus promo across the top</span>
+	</div>
+	<div class="img-flex-33">
+		<img alt="App homepage with bottom nav, notable links from slate.com and 'customize' link for customizing the homepage" src="/img/slate_ios_app/home_wireframe_3.png">
+		<span class="caption">App homepage with bottom nav, notable links from slate.com and "customize" link for customizing the homepage</span>
+	</div>
+</div>
 
 **Navigation**
-- Navigation should stay simple but have better organization, especially regarding rubrics’ relation to their section 
-- Different content types in the app that should be reflected in the navigation: Articles (Home, Most Recent / Most Pop / Saved, Section/Rubric content), Podcasts, Slate Plus / Account Info, Support
+- Navigation should stay simple but have better organization, especially regarding rubrics’ relation to their section
+- Different content types in the app that should be reflected in the navigation: Articles (Home, Most Recent/Most Popular/Saved, Section/Rubric content), Podcasts, Slate Plus/Account Info, Support
 - Fix search function and make it more prominent 
+
+<div class="img-flex-wrapper">
+	<div class="img-flex-33">
+		<img alt="Nav with 'podcasts' in 'main sections'" src="/img/slate_ios_app/nav_wireframe_1.png">
+		<span class="caption">Nav with "podcasts" in "main sections"</span>
+	</div>
+	<div class="img-flex-33">
+		<img alt="Nav with search at the top and 'podcasts' in 'feeds' section" src="/img/slate_ios_app/nav_wireframe_2.png">
+		<span class="caption">Nav with search at the top and "podcasts" in "feeds" section</span>
+	</div>
+	<div class="img-flex-33">
+		<img alt="App homepage with bottom nav and Slate Plus promo across the top" src="/img/slate_ios_app/home_wireframe_2.png">
+		<span class="caption">App homepage with bottom nav and Slate Plus promo across the top</span>
+	</div>
+</div>
 
 **Podcasts**
 - Podcasts should be easier to find, that ideally would be solved by updating how the navigation works (see above) 
-- When someone clicks podcasts, the first option should be choosing a show, not one of the latest episodes
+- Half the users expected "Podcasts" to land on "Shows" instead of "Latest Episodes" but this means half of them thought the opposite...maybe try this page defauting to "Shows" because that is how [slate.com/podcasts](https://slate.com/podcasts) works but this isn't necessary
 - Episode feeds should have the ad-free versions if the person is a Slate Plus member
-- Episodes should link to podcast apps
+- Episode pages should link to podcast apps
+
+[podcast wireframes]
 
 **Slate Plus**
 - Create Slate Plus landing page in the app: this page would explain the benefits of Slate Plus and provide price info and the option to sign up from this page
 - If you are already a member, you would just have an account info page where you could get your podcast feed, etc 
-- I think there shouldn’t be a Slate Plus page w/ Slate Plus bonus content, bonus content should just be indicated throughout the app w/ a Slate Plus logo (like it is on the website) 
+- I think there shouldn’t be a Slate Plus feed page w/ Slate Plus bonus content, bonus content should just be indicated throughout the app w/ a Slate Plus logo (like it is on the website) 
 
-## Wireframes and mocks
+[s+ wireframes]
 
 ## User Testing 
+
+Once I had a solid prototype, I decided I should talk to users again. I already knew users' problems with the old app so I decided to just give users the new prototype and ask them to do a few general tasks: 
+
+1. Can you find the article ["How Meet Cutes Have Changed in the 21st Century" by Heather Schwedel](https://slate.com/human-interest/2019/07/how-couples-meet-now-versus-earlier-eras.html)? 
+2. Can you find the "News & Politics" section? 
+3. How would you find the latest episode of [What Next](https://slate.com/podcasts/what-next)? 
+4. How would you join Slate Plus?
+
+[prototype](https://invis.io/W6T11A259RX#/374314337_homepage)
+[gif of prototype]
 
 ## Decision
 
