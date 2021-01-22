@@ -1,8 +1,7 @@
 ---
 layout: post-layout.njk
 tags: slate
-title: User testing&#58; paywall podcasts
-description: tk tk tk
+title: Paywall podcasts
 nicedate: November 02, 2020
 ---
 # {{ title }}

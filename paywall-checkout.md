@@ -1,8 +1,7 @@
 ---
 layout: post-layout.njk
 tags: slate
-title: User testing&#58; paywall checkout
-description: tk tk tk
+title: Paywall checkout
 nicedate: November 02, 2020
 ---
 # {{ title }}
@@ -16,25 +15,25 @@ Before mocking, I checked out a few other sites. All sites started with an "offe
 
 ## User testing
 
-### 1. [1-page](https://projects.invisionapp.com/share/W5US9YA4QNY#/screens/392870677_1_page_-_1) vs. [3-page](https://projects.invisionapp.com/share/W5US9YA4QNY#/screens/392875148_3_page_-_1) experience
+### 1. 1-page vs. 3-page experience
 
 For the first test, I tested a 1-page checkout experience vs. a 3-page checkout experience. I screened for users that read media sites at least once per week. 
 
 <div class="img-flex-wrapper">
 	<div class="img-flex-50">
 		<img alt="checkout experience that stays on 1 page" src="/img/checkout/UT1_1page.gif">
-		<span class="caption"><a href="https://projects.invisionapp.com/share/W5US9YA4QNY#/screens/392870677_1_page_-_1">1-page checkout</a></span>
+		<span class="caption">1-page checkout</span>
 	</div>
 	<div class="img-flex-50">
 		<img alt="checkout experience that is broken up into 3 pages" src="/img/checkout/UT1_3page.gif">
-		<span class="caption"><a href="https://projects.invisionapp.com/share/W5US9YA4QNY#/screens/392875148_3_page_-_1">3-page checkout</a></span>
+		<span class="caption">3-page checkout</span>
 	</div>
 </div>
 
 **Result:** Overall, users understood both processes. When I asked which experience users preferred (something I am trying to not do anymore because I don't think an experience should be dictated by preference), they preferred the 1-page experience so I decided to go with that. 
 
 
-### 2. [Forgot password experience](https://projects.invisionapp.com/share/W5US9YA4QNY#/screens/397971678_1-Page_Steps_-_LP)
+### 2. Forgot password experience
 
 For the next test, I wanted to test switching from the account creation form to the log in form. Slate has a lot of active commenters with accounts so I thought this might be a future use-case they'd have to deal with. 
 
@@ -47,7 +46,7 @@ One issue I had with this round of testing was that Invision doesn't allow [smoo
 	<div class="img-flex-50">
 		<img alt="forgot password form" src="/img/checkout/UT2_forgot_password.png">
 	</div>
-	<span class="caption"><a href="https://projects.invisionapp.com/share/W5US9YA4QNY#/screens/397971678_1-Page_Steps_-_LP">Forgot password experience</a></span>
+	<span class="caption">Forgot password experience</span>
 </div>
 
 **Result:** I asked users to subscribe as if they already had an account but couldn't remember their password. While 2 of the 8 users couldn't find the "forgot password" link, **the users who went through the whole “forgot password” flow thought it was straightforward.**

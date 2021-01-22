@@ -2,7 +2,6 @@
 layout: post-layout.njk
 tags: ga
 title: GIG iOS app
-description: GIG is an app for going to concerts with your friends. It was created because I thought there was a void in the market for a service that allows you to plan, buy and attend concerts with your friends easily.
 nicedate: October 14, 2017
 ---
 # {{ title }}
@@ -130,6 +129,9 @@ After many iterations, I decided on a final product that many users found clear 
 		<span class="caption">"Ticket purchase" final</span>
 	</div>
 </div>
+
+![prototype of the GIG app I created](/img/gig_flow.gif)
+<span class="caption">prototype of how buying a ticket would work in the GIG app</span>
 
 What I built is definitely the minimum to meet the user's needs. Some users suggested a few features that could be added in a future version of the app: 
 * **“Favorite” feature** - for shows you might want to attend but don’t want to commit to right away

@@ -2,7 +2,6 @@
 layout: post-layout.njk
 tags: slate
 title: New "cover story" layout
-description: tk tk tk
 nicedate: July 04, 2020
 ---
 # {{ title }}
