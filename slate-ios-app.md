@@ -1,7 +1,7 @@
 ---
 layout: post-layout.njk
 tags: slate
-title: iOS app concept
+title: Slate iOS app
 nicedate: November 23, 2019
 ---
 # {{ title }}
@@ -9,11 +9,13 @@ nicedate: November 23, 2019
 
 ## History
 
+[Chris Schieffer](https://twitter.com/cschieffer) and I decided to start working on this project after finishing the [podcasts project](/slate-podcasts). According to Chris, the Slate iOS app has small but very dedicated group of users but the app was outdated and had many bugs. We didn't want to change the app too much (because of the loyal readership) but wanted to make it smoother and easier to navigate. 
+
 The overall goals of the project: 
 
-1. Improve the Slate Plus experience: landing page and letting a user know they are logged in as a Slate Plus member.
-2. Improve podcast experience: are we presenting metadata in the best way, what updates should we be making so the app is update to date with [podcasts on the website](/slate-podcasts)
-3. Review app navigation and menu: are we surfacing the most important sections of the app in the easiest way we can? 
+1. **Improve the Slate Plus experience:** landing page and letting a user know they are logged in as a Slate Plus member.
+2. **Improve podcast experience:** are we presenting metadata in the best way, what updates should we be making so the app is update to date with [podcasts on the website](/slate-podcasts)
+3. **Review app navigation and menu:** are we surfacing the most important sections of the app in the easiest way we can? 
 4. Update style/brand of app to fit with [redesign](https://slate.com/briefing/2018/01/jason-santa-maria-on-how-slate-redesigned-the-way-we-work.html)
 
 
@@ -57,7 +59,7 @@ Overall, I learned that Slate iOS users opened the app because they want to read
 - 3 out of 10 users mentioned how they like the “save” feature
 
 **Podcasts**
-- 8 out of 10 users were confused by the headphones icon (the headphones icon is how you get to the Podcasts section), some users thought this icon was for accessibility 
+- 8 out of 10 users were confused by the headphones icon (the headphones icon is how you get to the podcasts section), some users thought this icon was for accessibility 
 - Most of these users looked in the regular menu first for “Podcasts” 
 - Half of the users thought the podcasts page should land on “Shows” first instead of “Latest” 
 - 3 out of 10 users said linking from Slate’s app to the show in podcast apps would be helpful
@@ -73,10 +75,9 @@ Overall, I learned that Slate iOS users opened the app because they want to read
 From the above findings, I decided on the following features & recommendations for the redesign: 
 
 **App Home**
-- This is the most-used page for current users
-- Users use this page ("most recent" feed) the most but were expecting something "more curated" so I think the home screen should pull in the hierarchy and editorially-picked stories from slate.com
+- This is the most-used page for current users but users were expecting something "more curated" so I think the home screen should pull in the hierarchy and editorially-picked stories from slate.com
 - Keep the swiping feature because it seems well-liked
-- It should be easy to navigate to a “Most Recent” (because people use it so much currently) but the homepage is separate
+- It should be easy to navigate to a “Most Recent” page (because people use it so much currently) but the homepage is separate
 
 <div class="img-flex-wrapper">
 	<div class="img-flex-33">
@@ -108,8 +109,8 @@ From the above findings, I decided on the following features & recommendations f
 		<span class="caption">Nav with search at the top and "podcasts" in "feeds" section</span>
 	</div>
 	<div class="img-flex-33">
-		<img alt="App homepage with bottom nav and Slate Plus promo across the top" src="/img/slate_ios_app/home_wireframe_2.png">
-		<span class="caption">App homepage with bottom nav and Slate Plus promo across the top</span>
+		<img alt="Bottom nav with quick links to 'news', 'podcasts', 'search' and 'account'" src="/img/slate_ios_app/home_wireframe_2.png">
+		<span class="caption">Bottom nav with quick links to "news", "podcasts", "search" and "account"</span>
 	</div>
 </div>
 
@@ -156,9 +157,9 @@ From the above findings, I decided on the following features & recommendations f
 	</div>
 </div>
 
-In addition to user feedback, I had heard from the product manager, [Chris Schieffer](https://twitter.com/cschieffer), that account management was notoriously difficult for both devs and users in the app. Many readers would subscribe to Slate Plus in the app and pay with their Apple ID. After subscribing the app, Slate would send users an email to create an account with slate.com but users rarely created one which created issues when members would try to use their Slate Plus benefits outside the Slate iOS app because they didn't have an account to log in with.
+In addition to user feedback, I had heard from the Chris that account management was notoriously difficult for both devs and users in the app. Many readers would subscribe to Slate Plus in the app and pay with their Apple ID. After subscribing the app, Slate would send users an email to create an account with slate.com but users rarely created one. Then, members would try to access their Slate Plus benefits outside the Slate iOS app (i.e. finding their private podcast feed link) but couldn't because they didn't have an account to log in with.
 
-To fix this, I started by creating a user flow for account creation:  
+To fix this, I created a user flow for account creation:  
 
 ![User paths for creating an account](/img/slate_ios_app/account_user_flow.jpg)
 <span class="caption">User paths for creating an account</span> 
