@@ -81,11 +81,14 @@ footer {
 	margin-bottom: 3rem; 
 }
 .job-block {
-	margin: 4rem 0; 
+	margin: 5rem 0; 
     @media (min-width: 728px) {
 		display: grid; 
 		grid-column-gap: 1.5rem;
-	    grid-template-columns: 50% 50%;
+	    grid-template-columns: 1fr 50%;
+	}
+	p {
+		margin-top: 0; 
 	}
 	ul {
 		list-style: none; 

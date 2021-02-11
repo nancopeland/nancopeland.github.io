@@ -225,12 +225,14 @@ footer {
   margin-bottom: 3rem; }
 
 .job-block {
-  margin: 4rem 0; }
+  margin: 5rem 0; }
   @media (min-width: 728px) {
     .job-block {
       display: grid;
       grid-column-gap: 1.5rem;
-      grid-template-columns: 50% 50%; } }
+      grid-template-columns: 1fr 50%; } }
+  .job-block p {
+    margin-top: 0; }
   .job-block ul {
     list-style: none;
     padding: 0; }
