@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  	<head>
+  		<meta charset="UTF-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<link rel="icon" type="image/png" href="img/favicon.png">
+  		<title>News quiz</title>
+  		<meta name="description" content="Nan Copeland&#39;s personal site">
+  		<!-- typekit --> 
+  		<link rel="stylesheet" href="https://use.typekit.net/jcb8jba.css">
+  		<link rel="stylesheet" href="/css/style.css">
+  	</head>
+  	<body>
+  		<nav>
+			 <a href="/">👀 Home</a>
+		  </nav>
+    	<article>
+	<h1>News quiz</h1>
+<p class="date">May 18, 2021</p>
+<h2>History</h2>
+<p><a href="https://twitter.com/cschieffer">Chris Schieffer</a> and I decided to update the <a href="https://slate.com/news-and-politics/the-slate-quiz">Slate news quiz</a> because it was one of the last features that hadn't be redesigned to fit <a href="https://slate.com/briefing/2018/01/jason-santa-maria-on-how-slate-redesigned-the-way-we-work.html">Slate's new style</a>. The quiz had been built at least 8 years prior so the interface was outdated and the scoring was not secure, according to the dev team.</p>
+<p><img src="/img/news_quiz/old_quiz_desktop.gif" alt="old news quiz">
+<span class="caption">Old news quiz design for the <a href="https://slate.com/news-and-politics/2021/05/slate-news-quiz-israeli-palestinian-conflict-liz-cheney-golden-globes.html">week of May 14, 2021</a></span></p>
+<p><img src="/img/news_quiz/old_quiz_leaderboard.gif" alt="old news quiz leaderboard">
+<span class="caption">Old news quiz leaderboard</span></p>
+<p>After meeting with the editorial, product and dev teams, Chris and I decided on this list of features for the MVP and post-MVP:</p>
+<h3>MVP</h3>
+<p><strong>Features to keep:</strong></p>
+<ul>
+<li>Quiz basics
+<ul>
+<li>Date</li>
+<li>Question</li>
+<li>Answer choices (4)</li>
+<li>Timer/countdown</li>
+<li>Score</li>
+</ul>
+</li>
+<li>Play against a Slatester</li>
+<li>Leaderboard
+<ul>
+<li>Should be able to toggle between Plus Members and Slatesters (including state where you are not signed in to Plus)</li>
+<li>Show your score against the average and Slatester you played against at the end</li>
+</ul>
+</li>
+<li>Way to review your answers</li>
+</ul>
+<p><strong>Features to disregard:</strong></p>
+<ul>
+<li>Coin counter/coins as the score</li>
+</ul>
+<h3>Post-MVP</h3>
+<ul>
+<li>Account registration to take quiz</li>
+<li>Update quiz builder</li>
+<li>Non-news quiz &gt; how is this built differently from a news quiz?
+<ul>
+<li>Will there be a timer for non-news quizzes?</li>
+<li>Leaderboard should be able to be turned off based on &quot;quiz type&quot;</li>
+</ul>
+</li>
+<li>Show percentage of readers that got each question correct</li>
+</ul>
+<p>Also, the way the old quiz worked was that it was an <code class="language-html">iframe</code> placed in a regular Slate article template. I wanted to convert the quiz to its own Clay components because, in my opinion, <code class="language-html">iframe</code>s more than likely ruin the experience. The dev team overruled me on this because updating the quiz builder would be very difficult but assured me we could improve the <code class="language-html">iframe</code> experience.</p>
+<h2>Wireframes</h2>
+<p>I started by laying out the current user journey of the news quiz to make sure I designed for all the various states.</p>
+<p><img src="/img/news_quiz/quiz_user_flow.jpg" alt="quiz user journey">
+<span class="caption">User journey</span></p>
+<p>The first thing I knew I wanted to change about the old design was the powerpoint &quot;slide&quot; layout. Why hide the questions with a slide when they could build down the page for easier review at the end? I also knew I wanted to orient the questions on top of the answers (instead of side-by-side) because that is a more natural orientation for mobile scrolling.</p>
+<div class="img-flex-wrapper">
+	<div class="img-flex-50">
+		<img src="/img/news_quiz/questions_1.png" alt="Wireframe idea that shows the timer and score in the top right and a preview of the next question greyed out below" />
+		<span class="caption">Wireframe idea that shows the timer and score in the top right and a preview of the next question greyed out below</span> 
+	</div>
+	<div class="img-flex-50">
+		<img src="/img/news_quiz/questions_2.png" alt="Wireframe idea that shows the correct answer, the timer and score in the bottom right and a preview of the next question greyed out below" />
+		<span class="caption">Wireframe idea that shows the correct answer, the timer and score in the bottom right and a preview of the next question greyed out below</span>
+	</div>
+</div>
+<p>I thought the transition between questions could be similar to the <a href="https://www.typeform.com/">Typeform</a> forms minus the difficult scrolling back up to see previous questions.</p>
+<p><img src="/img/news_quiz/typeform_demo.gif" alt="Typeform demo">
+<span class="caption">Typeform demo</span></p>
+<p>For the &quot;end of quiz&quot; experience, I knew I wanted to orient the score comparison chart horizontally (again, better for mobile). For the leaderboard, you had to be a <a href="https://slate.com/plus">Slate Plus</a> member to be on the leaderboard and to see the &quot;Slatester&quot; scores but anyone could see the Slate Plus member scores. This is a bit confusing so I thought I'd just make it so you have to be a Slate Plus member to see the whole leaderboard.</p>
+<div class="img-flex-wrapper">
+	<div class="img-flex-50">
+		<img src="/img/news_quiz/leaderboard_1.png" alt="Leaderboard being blocked by a prompt to sign up for Slate Plus" />
+		<span class="caption">Leaderboard being blocked by a prompt to sign up for Slate Plus</span> 
+	</div>
+	<div class="img-flex-50">
+		<img src="/img/news_quiz/leaderboard_2.png" alt="Leaderboard visible because user is a Slate Plus member" />
+		<span class="caption">Leaderboard visible because user is a Slate Plus member</span>
+	</div>
+</div>
+<h2>User Testing/ edits</h2>
+<p>Describe user testing and what changed, working w/ dev &amp; art team</p>
+<h2>Final result</h2>
+
+</article>
+    	<footer>
+    		<p><a href="/">Home</a> • <a href="/img/resume_nan_copeland.pdf">Download Resume</a></p>
+        <p>This site was created using <a href="https://www.11ty.dev/">11ty</a>. It uses <a href="https://fonts.adobe.com/fonts/franklin-gothic-urw">Franklin Gothic URW</a> from <a href="https://www.urwtype.com/en/">URW Type Foundry</a> via <a href="https://fonts.adobe.com/">Adobe Fonts</a>.</p>
+    	</footer>
+  	</body>
+</html>
