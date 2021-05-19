@@ -55,6 +55,10 @@ video {
 li {
 	margin-bottom: .5rem; 
 }
+ul ul, 
+ol ol { // list within a list
+	margin: .5rem 0; 
+}
 
 /******** nav **********/
 nav {

@@ -204,6 +204,10 @@ video {
 li {
   margin-bottom: .5rem; }
 
+ul ul,
+ol ol {
+  margin: .5rem 0; }
+
 /******** nav **********/
 nav {
   margin: 2rem 0; }
