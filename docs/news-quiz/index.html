@@ -17,7 +17,7 @@
 		  </nav>
     	<article>
 	<h1>News quiz</h1>
-<p class="date">May 19, 2021</p>
+<p class="date">May 20, 2021</p>
 <h2>History</h2>
 <p><a href="https://twitter.com/cschieffer">Chris Schieffer</a> and I decided to update the <a href="https://slate.com/news-and-politics/the-slate-quiz">Slate news quiz</a> because it was one of the last features that hadn't be redesigned to fit <a href="https://slate.com/briefing/2018/01/jason-santa-maria-on-how-slate-redesigned-the-way-we-work.html">Slate's new brand</a>. The quiz had been built at least 8 years prior so the interface was outdated and, according to the dev team, the scoring was not secure making it very easy to cheat.</p>
 <p><img src="/img/news_quiz/old_quiz_desktop.gif" alt="old news quiz">
@@ -41,7 +41,7 @@
 <li>Leaderboard
 <ul>
 <li>Show your score vs. the average vs. Slatester</li>
-<li>Show top scores for Plus members and Slatesters (this is only visible to Slate Plus members)</li>
+<li>Show top scores for Plus members and Slatesters</li>
 </ul>
 </li>
 <li>Way to review your answers</li>
@@ -63,10 +63,10 @@
 <li>Show percentage of readers that got each question correct</li>
 </ul>
 <h3>CMS</h3>
-<p>The way the old quiz worked was that it was built with a custom Slate News Quiz builder and placed in a regular Slate article template via an <code class="language-html">iframe</code> <a href="https://clay.nymag.com/">Clay</a> component. I, like most people, am not a fan of <code class="language-html">iframe</code>s because they always make the experience unnatural so I wanted to convert the quiz to its own Clay component(s). The dev team overruled me on this because updating the quiz builder would be very difficult but assured me we could improve the <code class="language-html">iframe</code> experience. This was important to know up front bc I needed to design for two different implementations:</p>
+<p>The old quiz was built with a custom quiz builder and placed in a regular Slate article template via a <a href="https://clay.nymag.com/">Clay</a> <code class="language-html">iframe</code> component. I, like most people, am not a fan of <code class="language-html">iframe</code>s because they make the experience feel unnatural so I wanted to convert the quiz to its own Clay component(s). The dev team overruled me on this because updating the quiz builder would be very difficult but assured me we could improve the <code class="language-html">iframe</code> experience. This was important to know up front bc I needed to design for two different implementations:</p>
 <ul>
 <li>Clay template - are we using the regular article template or a new &quot;quiz&quot; template?</li>
-<li><code class="language-html">iframe</code> - questions and leaderboard</li>
+<li><code class="language-html">iframe</code> - how the questions and leaderboard are added to the page</li>
 </ul>
 <h2>Wireframes</h2>
 <p>I started by laying out the current user journey of the news quiz to make sure I designed for all the various states.</p>
@@ -86,7 +86,7 @@
 <p>I thought the transition between questions could be similar to the <a href="https://www.typeform.com/">Typeform</a> forms minus the difficult scrolling back up to see previous questions.</p>
 <p><img src="/img/news_quiz/typeform_demo.gif" alt="Typeform demo">
 <span class="caption">Typeform demo</span></p>
-<p>For the &quot;end of quiz&quot; experience, I knew I wanted to orient the score comparison chart horizontally (again, better for mobile). For the leaderboard in the old experience, you had to be a <a href="https://slate.com/plus">Slate Plus</a> member to be on the leaderboard and to see the &quot;Slatester&quot; scores but anyone could see the Slate Plus member scores. This is a bit confusing so I thought I'd just make it so you have to be a Slate Plus member to see the whole leaderboard.</p>
+<p>For the &quot;end of quiz&quot; experience, I knew I wanted to orient the score comparison chart horizontally (again, better for mobile). For the leaderboard in the old experience, you had to be a <a href="https://slate.com/plus">Slate Plus</a> member to be on the leaderboard and to see the &quot;Slatester&quot; scores but anyone could see the Slate Plus member scores. This was a bit confusing so I thought I'd just make it so you have to be a Slate Plus member to see the whole leaderboard.</p>
 <div class="img-flex-wrapper">
 	<div class="img-flex-50">
 		<img src="/img/news_quiz/leaderboard_1.png" alt="Leaderboard being blocked by a prompt to sign up for Slate Plus" />
@@ -97,8 +97,8 @@
 		<span class="caption">Leaderboard visible because user is a Slate Plus member</span>
 	</div>
 </div>
-<h2>User Testing/ edits</h2>
-<p>Once I decided on a wireframe and general experience, I thought it would be best to user test it before getting too far along. I thought the quickest way to test this in person would be to talk to internal Slate coworkers. I showed them the old quiz experience vs. the new quiz experience and asked them to compare them.</p>
+<h2>User Testing</h2>
+<p>Once I decided on a wireframe and general experience, I thought it would be best to user test it before getting too far along. I thought the quickest way to test this in person would be to talk to internal Slate coworkers. I showed them the old quiz experience vs. the new quiz experience and asked them to compare.</p>
 <div class="img-flex-wrapper">
 	<div class="img-flex-50">
 		<img src="/img/news_quiz/old_quiz_desktop.gif" alt="Old news quiz experience" />
@@ -110,7 +110,7 @@
 	</div>
 </div>
 <p>Users liked the new experience but missed the Slate-y whimsical design of the old experience. Users also indicated that the timer and score were a bit confusing, probably because of the removal of coins in the new design.</p>
-<p>While the experience I showed users in this round of testing was a wireframe, I thought I should meet with Slate's art team to see if they had any suggestions on how to make the experince more whimsical. <a href="https://twitter.com/MatthewsRamo">Natalie Matthews-Ramo</a> suggested making the whole news quiz page feel more &quot;special&quot; with a banner at the top and generally adding more color to the page. She also suggested added a circular timer that is only visible when the user is being timed.</p>
+<p>While the experience I showed users in this round of testing was a wireframe, I thought I should meet with Slate's art team to see if they had any suggestions on how to make the experince more whimsical. <a href="https://twitter.com/MatthewsRamo">Natalie Matthews-Ramo</a> suggested making the whole news quiz page feel more &quot;special&quot; with a banner at the top and generally adding more color to the page. She also suggested adding a circular timer that is only visible when the user is being timed.</p>
 <div class="img-flex-wrapper">
 	<div class="img-flex-33">
 		<img src="/img/news_quiz/NMR_1.png" alt="Beginning of quiz with banner at the top" />
@@ -126,12 +126,12 @@
 	</div>
 </div>
 <p>I knew that adding the top banner would be a template change and not easy to do for user testing but I could incorporate the timer and some of the smaller design elements for the next round of testing.</p>
-<p>For the next round of testing, I decided to test Slate readers who are frequent Slate News Quiz takers. Because these users were so familiar with the old news quiz experience, I decided to just show them the new one and told them to refer to the old one if necessary for comparison.</p>
+<p>For the next round of testing, I decided to test Slate readers who are frequent Slate News Quiz takers. Because these users were so familiar with the old news quiz experience, I decided to just show them the new experience and refer to the old one if necessary for comparison.</p>
 <p><img src="/img/news_quiz/new_news_quiz_experience_v2.gif" alt="new experience with design updates">
 <span class="caption">New experience with design updates</span></p>
 <p>Users missed the old experience but didn't think the new experience was difficult to understand so I proceeded with building this experience in a new template.</p>
 <h2>Final result</h2>
-<p>Editorial, product, dev, art and I all decided the new quiz experience in a new template was a great idea. It was easier to use than the old quiz experience but still felt special and differentiated from a regular Slate article. But, I wanted to user test it one more time to make sure users wouldn't have trouble when it was finally launched.</p>
+<p>Editorial, product, dev, art and I all decided the new experience in a new template was a great idea. It was easier to use than the old quiz experience but still felt special and differentiated from a regular Slate article. But, I wanted to user test it one more time to make sure users wouldn't have trouble when it was finally launched.</p>
 <p><img src="/img/news_quiz/new_news_quiz_experience_v3.gif" alt="New experience in new template on desktop">
 <span class="caption">New experience in new template on desktop</span></p>
 <div class="img-flex-wrapper">
@@ -144,11 +144,11 @@
 		<span class="caption">New leaderboard experience</span>
 	</div>
 </div>
-<p>When user testing this, I noticed a few issues with ads that we needed to update for this template and also that the &quot;start quiz&quot; button and the share buttons were similar in size. To fix that, I updated the look of the share buttons to look more like secondary links.</p>
+<p>When user testing this, I noticed a few issues with ads that we needed to tweak for this template and also that the &quot;start quiz&quot; button and the share buttons were similar in size. To fix that, I updated the look of the share buttons to look more like secondary links.</p>
 <p><img src="/img/news_quiz/share_buttons.png" alt="New template with updated share buttons">
 <span class="caption">New template with updated share buttons</span></p>
 <p>This project has not gone live yet but when it does, it will be at <a href="https://slate.com/news-and-politics/the-slate-quiz">slate.com/news-and-politics/the-slate-quiz</a>.</p>
-<p>I worked on this project with many people: Product management was led by <a href="https://twitter.com/cschieffer">Chris Schieffer</a> and <a href="https://twitter.com/mwieg">Megan Wiegand</a> and <a href="https://twitter.com/abbjmc">Abby McIntyre</a> provided lots of valuable editorial and CMS feedback. Development work was led by <a href="https://github.com/macgyver">Jonathan Zuckerman</a> and <a href="https://github.com/ivanfex">Iván Felix</a>. <a href="https://twitter.com/MatthewsRamo">Natalie Matthews-Ramo</a> provided me with great visual feedback and edits to make the whole experience feel more Slate-y.</p>
+<p>I worked on this project with many people: Product management was led by <a href="https://twitter.com/cschieffer">Chris Schieffer</a>. <a href="https://twitter.com/mwieg">Megan Wiegand</a> and <a href="https://twitter.com/abbjmc">Abby McIntyre</a> provided lots of valuable editorial and CMS feedback. Development work was led by <a href="https://github.com/macgyver">Jonathan Zuckerman</a> and <a href="https://github.com/ivanfex">Iván Felix</a>. <a href="https://twitter.com/MatthewsRamo">Natalie Matthews-Ramo</a> provided me with great visual feedback and edits to make the whole experience feel more Slate-y.</p>
 
 </article>
     	<footer>
